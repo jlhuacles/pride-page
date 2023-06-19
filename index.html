@@ -1,0 +1,1888 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Parallax</title>
+	<!-- Scrollreveal -->
+	<script src="https://unpkg.com/scrollreveal"></script>
+	<!-- SimpleParallax -->
+	<script src="https://cdn.jsdelivr.net/npm/simple-parallax-js@5.5.1/dist/simpleParallax.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="./style-page.css">
+</head>
+
+<body>
+	<style type="text/css">
+		@import url(https://fonts.googleapis.com/css2?family=Roboto&display=swap);
+		@import url('https://fonts.googleapis.com/css2?family=Crimson+Text:wght@600;700&family=DM+Sans&display=swap');
+
+		* {
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+			/* color: #212529; */
+
+		}
+
+		html {
+			-ms-text-size-adjust: 100%;
+			font-size: 90.5%;
+			-webkit-text-size-adjust: 100%;
+			/* color: #212529; */
+		}
+
+		body,
+		html {
+			overflow-x: hidden;
+			margin: 0;
+			padding: 0;
+		}
+
+
+		.w-1000 {
+			width: 100%;
+			max-width: 1000px;
+			margin: 0 auto;
+		}
+
+		.d-flex {
+			display: flex;
+			align-items: center;
+		}
+
+		.space-between {
+			justify-content: space-between;
+		}
+
+		footer {
+			padding: 42px;
+			font-family: sans-serif;
+		}
+
+		header {
+			position: fixed;
+			top: 0;
+			left: 0;
+			width: 100%;
+			z-index: 999;
+			transition: all 0.5s ease;
+			padding: 15px 42px;
+			background: black;
+			border-bottom: 4px solid #036a93;
+		}
+
+		header span {
+			font-size: 0;
+		}
+
+		header img {
+			width: 140px;
+		}
+
+		footer span {
+			display: block;
+			text-align: center;
+			color: #fff;
+			font-size: 14px;
+			line-height: 1.5;
+		}
+
+		span [class*="btn-"] {
+			display: inline-block;
+			width: 30px;
+			height: 30px;
+			margin-left: 10px;
+		}
+
+		span a.btn-fb {
+			margin-left: 0;
+		}
+
+		span a.btn-fb,
+		span a.btn-twt,
+		span a.btn-wsp {
+			background-image: url(https://files.larepublica.pe/Larepublica/2020/11/09/iconos-redes-sociales-blanco-1604962294.svg);
+			background-position: 0 0;
+			background-repeat: no-repeat;
+			background-size: 30px;
+		}
+
+		span a.btn-twt {
+			background-position: 0 -40px;
+			background-repeat: no-repeat;
+		}
+
+		span a.btn-wsp {
+			background-position: 0 -80px;
+			background-repeat: no-repeat;
+		}
+
+		h1 {
+			font-size: 30px;
+			line-height: 1.3;
+			margin-bottom: 2rem;
+			font-family: 'Crimson Text', serif !important;
+			max-width: 700px;
+			font-weight: 700;
+		}
+
+		h1 span {
+			background: linear-gradient(to right,
+					rgba(0, 0, 0, 0.5508404045211834) 63%,
+					transparent);
+			font-size: 60px;
+		}
+
+
+		.bajada {
+			font-size: 2rem;
+			font-weight: 400;
+			line-height: 1.4;
+		}
+
+		h2 {
+			font-size: 2.2rem;
+			font-family: 'DM Sans', sans-serif;
+			width: 100%;
+			/* margin: -110px auto 25px; */
+			/* padding-top: 120px; */
+		}
+
+		h4 {
+			font-size: 1.8rem;
+			font-family: sans-serif;
+			width: 100%;
+			margin: 0 auto 25px;
+			max-width: 750px;
+		}
+
+		h4:before {
+			position: relative;
+			width: 40px;
+			height: 4px;
+			background-color: #e30613;
+			content: "";
+			display: block;
+			bottom: 4px;
+		}
+
+
+
+		.texto-lr,
+		h1,
+		.bajada {
+
+			width: 100%;
+			margin: 10px 0;
+		}
+
+		h1,
+		.bajada {
+			color: #fff;
+			/*text-align: center;*/
+			width: 100%;
+		}
+
+		.texto-lr {
+			font-size: 11pt;
+			font-weight: 400;
+			text-align: left;
+			font-family: 'DM Sans', sans-serif;
+			padding-top: 25px;
+		}
+
+
+		.bajada {
+			max-width: 750px;
+		}
+
+		.texto-lr,
+		.texto-lr p {
+			max-width: 750px;
+			margin: 0 auto;
+			padding-bottom: 15px;
+			line-height: 1.7;
+			display: block;
+			font-size: 16px;
+		}
+
+		@media (max-width: 767px) {
+			.p-10 {
+				padding: 0 10px;
+			}
+
+			.texto-lr {
+				margin: 0 auto 1px;
+				padding: 20px 15px 0px 15px;
+			}
+
+			h1 {
+				font-size: 2rem !important;
+			}
+
+			.bajada {
+				font-size: 1.7rem;
+				margin: 20px auto;
+			}
+
+			h4 {
+				padding: 0 15px;
+			}
+
+			header {
+				padding: 15px 20px;
+			}
+
+			footer {
+				padding: 27.9px 30px;
+			}
+
+			.w-text {
+				padding: 0 30px 10px;
+				max-width: 100%;
+				height: initial !important;
+			}
+
+			.hero-image {
+				display: block !important;
+				height: 100% !important;
+				background: black;
+			}
+
+			.hero-image .w-img {
+				position: initial;
+				padding-top: 20%;
+			}
+
+			.w-text h1 {
+				margin-top: 0;
+				padding-top: 20px;
+			}
+
+			.botones-header div {
+				padding: 5px !important;
+				font-size: 9pt;
+			}
+
+		}
+
+		span a.btn-fb,
+		span a.btn-twt,
+		span a.btn-wsp {
+			background-size: cover;
+			/* background-color: #fff; */
+			border-radius: 50%;
+		}
+
+		span [class*="btn-"] {
+			display: inline-block;
+			width: 40px;
+			height: 40px;
+			margin-left: 10px;
+		}
+
+		@media (min-width: 768px) {
+
+			header img {
+				width: 160px;
+			}
+
+			span a.btn-twt {
+				background-position: 0 -40px;
+				background-repeat: no-repeat;
+			}
+
+			span a.btn-wsp {
+				background-position: 0 -80px;
+				background-repeat: no-repeat;
+			}
+
+			/* h1,
+            .bajada {
+                max-width: 100%
+            } */
+		}
+	</style>
+	<style>
+		.headline {
+			font-weight: 100;
+		}
+
+		.container {
+			padding: 45px 15px 15px 15px;
+			margin: 0 auto;
+			max-width: 750px;
+		}
+
+		.wrapper {
+			border-left: 5px solid #eaeaea;
+			padding: 0 25px;
+		}
+
+		.item-list {
+			font-family: sans-serif;
+			position: relative;
+		}
+
+		.item-list::before {
+			content: "";
+			position: absolute;
+			width: 20px;
+			height: 2px;
+			top: 7%;
+			transform: translate(-50%, -50%);
+			left: -4.4%;
+			background-color: #fe2d04;
+			z-index: 1;
+		}
+
+		.item-list::after {
+			content: "";
+			background-color: #000;
+			border-radius: 50%;
+			height: 7px;
+			left: -12%;
+			position: absolute;
+			top: 7%;
+			transform: translate(-50%, -50%);
+			width: 7px;
+		}
+
+		.item-list h4 {
+			font-size: 22px;
+			font-weight: 400;
+			margin: 0 0 10px 0;
+		}
+
+		.item-list p {
+			font-size: 16px;
+			line-height: 1.4;
+			margin: 0 0 30px 0;
+		}
+
+		.point {
+			background-color: #eaeaea;
+			border: 2px solid #fff;
+			border-radius: 50%;
+			height: 20px;
+			left: -12%;
+			position: absolute;
+			top: 7%;
+			transform: translate(-50%, -50%);
+			width: 20px;
+		}
+
+		time {
+			font-size: 20px;
+			font-style: italic;
+		}
+
+		.flourish-embed {
+			margin: 20px 10px;
+		}
+
+		.flourish-credit {
+			display: none;
+		}
+
+		@media (min-width: 360px) {
+			.item-list::before {
+				left: -3.5%;
+				top: 9%;
+			}
+
+			.item-list::after {
+				left: -10%;
+				top: 9%;
+			}
+
+			.point {
+				left: -10%;
+				top: 9%;
+			}
+		}
+
+		@media (min-width: 400px) {
+			.item-list::before {}
+
+			.item-list::after {
+				left: -9%;
+			}
+
+			.point {
+				left: -9%;
+			}
+		}
+
+		@media (min-width: 410px) {
+			.item-list::before {}
+
+			.item-list::after {
+				left: -8.5%;
+			}
+
+			.point {
+				left: -8.5%;
+			}
+		}
+
+		@media (min-width: 768px) {
+			.item-list::before {
+				left: -1.4%;
+				top: 15%;
+			}
+
+			.item-list::after {
+				left: -4%;
+				top: 15%;
+			}
+
+			.point {
+				border: 3px solid #fff;
+				height: 25px;
+				left: -4%;
+				top: 15%;
+				width: 25px;
+			}
+
+			.headline {
+				margin: 30px auto 0px;
+			}
+
+			.flourish-embed {
+				max-width: 768px;
+				margin: 10px auto;
+				margin-bottom: 20px;
+			}
+		}
+
+		@media (min-width: 999px) {
+			.item-list::before {
+				left: -1.2%;
+			}
+
+			.item-list::after {
+				left: -3.1%;
+			}
+
+			.point {
+				left: -3.1%;
+			}
+		}
+	</style>
+	<style>
+		.container__menu {
+			font-size: 0;
+		}
+
+		.mapa_distribucion {
+			display: block;
+			margin: 0 auto;
+			max-width: 970px;
+			width: 100%;
+		}
+
+		.menu__button {
+			display: inline-block;
+			vertical-align: middle;
+			width: 38px;
+		}
+
+		.menu__button button {
+			background-color: transparent;
+			border: none;
+			height: 17px;
+			width: 20px;
+		}
+
+		.menu__button button span {
+			display: block;
+			width: 100%;
+			height: 3px;
+			background-color: #000;
+			margin: 0 0 3px 0;
+			border-radius: 15px;
+		}
+
+		.menu__button button span:last-child {
+			margin: 0;
+		}
+
+		.menu__left {
+			display: inline-block;
+			vertical-align: middle;
+			width: 175px;
+		}
+
+		.menu__rigth {
+			display: inline-block;
+			text-align: right;
+			vertical-align: middle;
+			width: calc(100% - 198px);
+			min-width: 140px;
+		}
+
+		.content__menu-mobile {
+			display: none;
+			background-color: #FFF;
+			border-bottom: 1px solid #404040;
+			left: 0;
+			position: absolute;
+			text-align: center;
+			top: 77px;
+			width: 100%;
+		}
+
+		.content__menu-mobile ul {
+			padding: 0 0 10px 0;
+		}
+
+		.content__menu-mobile ul li {
+			padding: 10px 0 0 0;
+		}
+
+		.content__menu-mobile ul li a {
+			font-size: 15px;
+			text-decoration: none;
+		}
+
+		.active-menu {
+			display: block;
+		}
+
+		.items__menu {
+			display: none;
+		}
+
+		.items__menu ul {
+			padding: 10px 0;
+		}
+
+		.items__menu ul li {
+			display: inline-block;
+			margin: 0 0 0 10px;
+		}
+
+		.items__menu ul li a {
+			color: #383939;
+			font-size: 14px;
+			text-decoration: none;
+		}
+
+		@media (min-width: 768px) {
+			.menu__button {
+				display: none;
+			}
+
+			.menu__left {
+				width: 300px;
+			}
+
+			.menu__rigth {
+				display: inline-block;
+				width: calc(100% - 300px);
+			}
+
+			.content__menu-mobile {
+				display: none;
+			}
+
+			.items__menu {
+				display: block;
+			}
+
+			.padding-parallax-img {
+				padding-top: 74px;
+			}
+		}
+
+		.hero-image {
+			position: relative;
+			min-height: 100vh;
+			display: flex;
+			align-items: flex-end;
+		}
+
+		.hero-image .opacity {
+			background-color: #000;
+			height: 100%;
+			left: 0;
+			opacity: 0.3;
+			overflow: hidden;
+			pointer-events: none;
+			position: absolute;
+			top: 0;
+			width: 100%;
+		}
+
+		.w-img {
+			margin: 65px 0 0 0;
+			overflow: hidden;
+			position: absolute;
+			top: 0;
+			width: 100%;
+		}
+
+		.w-img img {
+			width: 100%;
+		}
+
+		.w-text {
+			height: calc(100vh - 240px);
+			/* background: #000; */
+			position: relative;
+			width: 100%;
+		}
+
+		@media (min-width: 768px) {
+			.w-img {
+				height: 100%;
+				background: black;
+				margin: 0;
+				left: 0;
+				overflow: hidden;
+				pointer-events: none;
+				position: absolute;
+				top: 0;
+				width: 100%;
+			}
+
+			.w-img img {
+				/* height: 80%; */
+				object-fit: contain;
+				object-position: center;
+				margin-top: 70px;
+				/*width: 100%;*/
+				background: black;
+				/*max-height: 70vh;*/
+			}
+
+			.w-text {
+				/*height: calc(100vh - 260px);*/
+				/* height: 100%; */
+				/*background-color: #000;*/
+				/*background: linear-gradient(180deg, transparent, #000);*/
+				/* background: linear-gradient(180deg, transparent 0%, #000 25%); */
+				position: relative;
+				padding: 42px 42px 20px;
+				width: 100%;
+			}
+		}
+
+		#content__teaser img {
+			width: 100%;
+		}
+
+		.texto-lr small {
+			text-align: center;
+			display: block;
+			font-style: italic;
+		}
+
+		h5 {
+			font-size: 14px;
+			margin-top: 30px;
+		}
+
+		h5.line {
+			font-size: 12px;
+			font-weight: normal;
+			padding-bottom: 2px;
+			min-width: 290px;
+			max-width: 40%;
+			border-bottom: 2px solid #036a93;
+			margin-top: 0;
+		}
+
+		.iframe-container {
+			overflow: hidden;
+			padding-top: 56.25%;
+			/* 16:9*/
+			position: relative;
+			margin-bottom: 25px;
+		}
+
+		.iframe-container iframe {
+			border: 0;
+			height: 100%;
+			left: 0;
+			position: absolute;
+			top: 0;
+			width: 100%;
+			/*-ms-zoom: 1.25;
+          -moz-transform: scale(1.25);
+          -moz-transform-origin: center;
+          -o-transform: scale(1.25);
+          -o-transform-origin: center;
+          -webkit-transform: scale(1.25);
+          -webkit-transform-origin: center;*/
+		}
+
+		@media (min-width: 1100px) {
+			.w-img img {
+				/*margin-top: -140px;*/
+				margin-top: 70px;
+			}
+		}
+
+		.botones-header {
+			position: fixed;
+			top: 74px;
+			width: 100%;
+			/* border-bottom: 1px solid black; */
+			background-color: #000;
+			font-size: 10pt;
+			/* overflow-x: scroll; */
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			/* flex-wrap: wrap; */
+		}
+
+		.botones-header div {
+			padding: 5px 15px;
+			border-left: 1px solid white;
+			height: 100%;
+		}
+
+		.botones-header a {
+			color: #fff !important;
+		}
+
+		.botones-header div:first-child {
+			border: none;
+		}
+	</style>
+	<style>
+		.contentFixedElement {
+			position: relative;
+		}
+
+		.container-imgs {
+			position: relative;
+		}
+
+		.visible {
+			opacity: 1 !important;
+			position: absolute;
+			top: 0;
+		}
+
+		.invisible {
+			opacity: 0 !important;
+		}
+
+		.content-img-fixed {
+			width: 100vw;
+			height: 100vh;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			opacity: 0;
+			transition: all 1s;
+
+		}
+
+		.content-img-fixed img {
+			max-height: 100%;
+			width: 100%;
+
+		}
+
+		.content-img-fixed:nth-child(1) {
+			opacity: 1;
+		}
+
+		.fixed_top .content-img-fixed:nth-child(1) {
+			opacity: 1;
+		}
+
+		.absolute_bottom,
+		.absolute_bottom .content-img-fixed {
+			position: absolute !important;
+			bottom: 0 !important;
+			top: inherit !important;
+		}
+
+		.fixed_top,
+		.fixed_top .content-img-fixed {
+			position: fixed !important;
+			top: 0 !important;
+			bottom: inherit !important;
+		}
+
+		.text-fixed {
+			width: 100%;
+			position: absolute;
+			top: 0;
+			/*left: 50%;
+                transform: translateX(-50%);*/
+			color: #000;
+		}
+
+		.text-fixed p {
+			height: 100vh;
+			display: flex;
+			align-items: flex-start;
+			justify-content: center;
+			font-weight: 400;
+			font-size: 17px;
+			line-height: 28px;
+			font-family: sans-serif;
+			text-align: center;
+		}
+
+		.text-fixed .inter-title {
+			font-size: 24px;
+		}
+
+		.text-fixed span {
+			width: 90%;
+			max-width: 90rem;
+			border: 1px solid #000;
+			padding: 2rem;
+			border-radius: 1px;
+		}
+
+		.comments {
+
+			opacity: 0.9;
+			line-height: 26px;
+			background-color: #000;
+			color: white;
+			padding: 24px 16px;
+			border-radius: 2px;
+			font-size: 1.5em;
+			font-style: italic;
+
+		}
+
+		.comments .red {
+			color: #EB052B;
+			font-weight: 400;
+		}
+
+		.comments .blue {
+			color: #3d8495;
+			font-weight: 400;
+		}
+
+		.text-fixed span.b-text {
+			line-height: 1;
+		}
+
+		.text-fixed span strong {
+			font-size: 2.5rem;
+		}
+
+		.text-fixed .fotoTexto {
+			display: block;
+			width: 100%;
+			max-width: 350px;
+			margin: 0 auto;
+			margin-top: 10px;
+		}
+
+		.bold {
+			font-weight: bold;
+		}
+
+		@media (max-width: 768px) {
+
+			.image1 {
+				background: url("./foto.png");
+				background-repeat: no-repeat;
+				background-size: 100% 100%;
+
+			}
+
+			.image2 {
+				background: url("./foto2.png");
+				background-repeat: no-repeat;
+				background-size: 100% 100%;
+
+			}
+
+			.image3 {
+				background: url("./foto3.png");
+				background-repeat: no-repeat;
+				background-size: 100% 100%;
+
+			}
+
+			.visible {
+				opacity: 1 !important;
+				position: absolute;
+				top: 0;
+				transition: opacity 0.9s ease-in-out;
+			}
+
+			.invisible {
+				transition: opacity 0.9s ease-in-out;
+			}
+
+
+			.content-img-fixed img {
+				visibility: hidden;
+			}
+
+
+			/* #content{
+                    margin-top: -30vh !important;
+                } */
+
+			.contentFixedElement img {
+				padding-top: 40px;
+			}
+
+			.content-img-fixed,
+			.contentFixedElement,
+			.img-block-fixed {
+				height: 100vh;
+				width: 100%;
+				justify-content: center;
+			}
+
+			.text-fixed {
+				width: 100%;
+			}
+
+			.text-fixed p {
+				margin: 0;
+				padding: 20px;
+			}
+
+			.text-fixed span {
+				margin: 0;
+				width: 100%;
+				max-width: 100%;
+
+
+			}
+
+			.text-fixed span strong {
+				font-size: 18px;
+			}
+
+			.absolute_bottom {
+				width: 100vw;
+			}
+
+			/* style for comments text */
+
+			.w-img img {
+				display: none !important;
+			}
+
+			h1 span {
+				font-size: 40px;
+			}
+		}
+	</style>
+	<style>
+		/* Estilos para el contenedor de la pantalla de la tablet */
+		.tablet {
+			max-width: 800px;
+			margin: 0 auto;
+			padding: 20px;
+			display: flex;
+			flex-direction: row;
+			justify-content: center;
+			align-items: center;
+			background-color: #f2f2f2;
+			border: 5px solid #ccc;
+			border-radius: 10px;
+
+		}
+
+		/* Estilos para la parte superior de la tablet */
+		.tablet .top-bar {
+			display: flex;
+			flex-direction: column;
+			/* Cambio a dirección vertical */
+			align-items: center;
+			/* Alinear a la izquierda */
+			justify-content: center;
+			height: 400px;
+			width: 30px;
+			/* Ajustar el ancho de la barra */
+			margin-right: 5px;
+			/* Añadir espacio entre la barra y la pantalla */
+			padding: 5px;
+			background-color: #333;
+			justify-content: space-between;
+		}
+
+		.tablet .top-bar .camera {
+			width: 20px;
+			height: 20px;
+			background-color: #fff;
+			border-radius: 50%;
+			margin-bottom: 5px;
+			/* Añadir espacio entre la cámara y los botones */
+		}
+
+		.tablet .top-bar .buttons {
+			display: flex;
+			flex-direction: column;
+			/* Alinear los botones verticalmente */
+		}
+
+		.tablet .top-bar .button {
+			width: 10px;
+			height: 10px;
+			background-color: #fff;
+			border-radius: 50%;
+			margin-bottom: 2px;
+			/* Añadir espacio entre los botones */
+		}
+
+		/* Estilos para la pantalla de la tablet */
+		.tablet .screen {
+			flex-grow: 1;
+			width: 100%;
+			height: 400px;
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+			align-items: center;
+			background-color: #fff;
+			border-radius: 5px;
+			padding: 10px;
+			overflow: scroll;
+		}
+
+		/* Estilos para los divs que contienen los iconos */
+		.app-icon {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			background-color: #fff;
+			border-radius: 10px;
+			padding: 10px;
+			margin: 10px;
+			width: 100px;
+			height: 100px;
+			cursor: pointer;
+		}
+
+
+
+		.app-icon img {
+			max-width: 100%;
+			max-height: 100%;
+			border-radius: 5px;
+		}
+
+		.app-icon span {
+			font-size: 12px;
+			margin-top: 5px;
+		}
+
+		.modal {
+			/* display: none; */
+			/* Ocultar el modal por defecto */
+			position: fixed;
+			z-index: 500;
+			left: 0;
+			top: 0;
+			width: 100%;
+			height: 100%;
+			overflow: auto;
+			padding: 5px;
+
+
+		}
+
+		.filter-modal {
+			filter: invert(0%) sepia(8%) saturate(0%) hue-rotate(96deg) brightness(99%) contrast(107%);
+		}
+
+		.modal-content {
+			background-color: #fff;
+			/* margin: 50vh auto; */
+			/* padding: 20px; */
+			max-width: 675px;
+			border-radius: 5px;
+			position: relative;
+			top: 32vh;
+			margin-left: auto;
+			margin-right: auto;
+			height: auto;
+			padding-bottom: 20px;
+			font-size: 16px;
+			border: 1px solid #036a93;
+			font-family: 'DM Sans', sans-serif;
+			box-shadow: 0px 1px 33px -3px rgba(0, 0, 0, 0.75);
+			-webkit-box-shadow: 0px 1px 33px -3px rgba(0, 0, 0, 0.75);
+			-moz-box-shadow: 0px 1px 33px -3px rgba(0, 0, 0, 0.75);
+		}
+
+		.modal-close {}
+
+		.modal-title {
+			font-size: 20px;
+			font-weight: bold;
+			margin-bottom: 10px;
+			color: #fff;
+			background-color: #036a93;
+			padding: 10px 20px;
+			text-transform: uppercase;
+		}
+
+
+
+		.modal-close {
+			color: #fff;
+			font-size: 28px;
+			font-weight: bold;
+
+			position: absolute;
+			top: 10px;
+			right: 10px;
+			width: 30px;
+			height: 30px;
+			border-radius: 50%;
+			background-color: red;
+			color: #fff;
+			font-size: 18px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			cursor: pointer;
+		}
+
+		.no-scroll {
+			/* Debe tener altura específica para que funcione */
+			max-height: 100vh;
+			overflow: hidden;
+		}
+
+		/* grid superior */
+		.parent-superior {
+			display: grid;
+			grid-template-columns: 2fr 1fr;
+			grid-template-rows: 1fr;
+			grid-column-gap: 10px;
+			grid-row-gap: 10px;
+			margin-bottom: 10px;
+		}
+
+		.parent-superior-title {
+			grid-area: 1 / 1 / 2 / 2;
+		}
+
+		.parent-superior-imagen {
+			grid-area: 1 / 2 / 2 / 3;
+			align-self: center;
+			justify-self: center;
+		}
+
+		.parent-superior-title--instalaciones {
+			border-top: 2px dotted #036a93;
+			border-bottom: 2px dotted #036a93;
+			width: 60%;
+			color: #036a93;
+			display: flex;
+			gap: 10px;
+			margin-top: 20px;
+			justify-content: center;
+			align-items: center;
+		}
+
+		.parent-superior-title--instalaciones span {
+			font-size: 32px;
+			color: #036a93;
+			font-weight: bold;
+		}
+
+
+
+		/* grid modal-info */
+		.parent {
+			display: grid;
+			grid-template-columns: repeat(2, 1fr);
+			grid-template-rows: 2fr repeat(3, 1fr);
+			grid-column-gap: 5px;
+			grid-row-gap: 5px;
+			margin-bottom: 5px;
+			padding: 5px 20px;
+
+		}
+
+		.div1 {
+			grid-area: 1 / 1 / 2 / 3;
+		}
+
+		.div2 {
+			grid-area: 2 / 1 / 3 / 2;
+		}
+
+		.div3 {
+			grid-area: 2 / 2 / 3 / 3;
+		}
+
+		.div4 {
+			grid-area: 3 / 1 / 4 / 2;
+		}
+
+		.div5 {
+			grid-area: 3 / 2 / 4 / 3;
+		}
+
+		.div6 {
+			grid-area: 4 / 1 / 5 / 2;
+		}
+
+		.div7 {
+			grid-area: 4 / 2 / 5 / 3;
+		}
+
+		/* grid modal-info-items */
+
+		.modal-info-item {
+			display: grid;
+			grid-template-columns: 10% 90%;
+			grid-template-rows: repeat(2, 10px);
+			grid-column-gap: 10px;
+			grid-row-gap: 10px;
+		}
+
+		.modal-info-item--imagen {
+			grid-column: 1;
+			grid-row: span 2;
+			justify-self: center;
+			align-self: center;
+		}
+
+		.modal-info-item-subtitle {
+			grid-column: 2;
+			grid-row: 1;
+		}
+
+		.modal-info-item-subcontent {
+			grid-column: 2;
+			grid-row: 2;
+		}
+
+		.estado-vigencia {
+			background-color: #036a93;
+			border-radius: 10px;
+			color: white;
+			padding: 3px 8px;
+		}
+
+		.estado-eliminado {
+			background-color: red !important;
+			border-radius: 10px;
+			color: white;
+			padding: 3px 8px;
+		}
+
+		#tooltip {
+			position: absolute;
+			width: 75%;
+			height: 70vh;
+			top: 200px;
+			left: 15px;
+			z-index: 3;
+			margin: auto;
+			padding: 10px;
+			background-color: transparent;
+			text-align: left;
+			justify-content: start;
+			align-items: start;
+
+			border-radius: 5px;
+			pointer-events: none;
+			overflow: scroll;
+			color: white;
+
+
+		}
+
+		#tooltip::-webkit-scrollbar {
+			display: none;
+		}
+
+		.item {
+
+
+
+			background-color: #ececec;
+			border-radius: 1px;
+			transition: all 0.5s ease-out;
+
+		}
+
+		.item:hover {
+			color: white !important;
+			background-color: none;
+		}
+
+
+		/* Clase para mostrar el tooltip */
+		.tooltip-show {
+
+			visibility: visible;
+			opacity: 1;
+			display: flex;
+			flex-direction: column;
+			flex-wrap: wrap;
+			justify-content: center;
+			text-align: center;
+			gap: 10px;
+			transition: opacity 0.2s ease-in-out;
+
+		}
+
+		.tooltip-hide {
+			visibility: hidden;
+			opacity: 0;
+			transition: opacity 0.2s ease-in-out;
+		}
+
+
+		/* Clase para ocultar el tooltip */
+
+
+		#container {
+			max-width: 100%;
+			/* height: 100vh; */
+			/* margin: 0 auto 25px; */
+			display: block;
+			box-sizing: border-box;
+			overflow-x: scroll;
+			min-height: 100vh;
+
+		}
+
+		.user {
+			font-weight: bold;
+			text-transform: uppercase;
+		}
+
+		/* color para el humanito */
+		.fa-user {
+			font-size: 0.81vw;
+			color: #677784;
+			background-color: transparent;
+		}
+
+		.item-seleccionado {
+			/* background-color: red; */
+		}
+
+		.titulo-viz {
+			text-align: center;
+			font-size: 16px;
+		}
+
+		.number {
+			font-size: 65px;
+			font-weight: bold;
+
+		}
+
+		#h-section {
+			/* height: 100vh; */
+			background-image: url("./fondo-oscuro1.png");
+			padding: 0px 0px 40px 0px;
+			background-repeat: no-repeat;
+			background-size: cover;
+		}
+
+		#g-section {
+			/* height: 100vh; */
+
+			padding: 25px 0px;
+		}
+
+		.text-viz {
+			border: 3px solid #036a93;
+			padding-right: 15px;
+			padding-left: 15px;
+
+
+		}
+
+		.user {
+			font-size: 15px;
+		}
+
+		.user-comment {
+			font-size: 35px;
+			display: inline;
+			background-color: black;
+		}
+
+
+
+		.user-comment::after {
+			content: '"'
+		}
+
+		.user-comment::before {
+			content: '"'
+		}
+
+		#w-section {
+			background-image: url("./fondo-plomo1.png");
+			background-repeat: repeat-y;
+			background-size: cover;
+		}
+
+		.tablet-section .texto-lr {
+			color: #fff;
+		}
+
+		/* estilos para FAQ */
+
+		.principal-comment {
+			width: 100%;
+			height: 222px;
+			position: relative;
+			border: 5px solid #036a93;
+			margin-bottom: 15px;
+		}
+
+		.slide-container {
+			width: 100%;
+			height: 100%;
+			overflow: hidden;
+
+		}
+
+		.slide {
+			width: 100%;
+			height: 100%;
+			background-color: #fff;
+			/* Color de fondo de cada slide */
+			position: absolute;
+			top: 0;
+			left: 0;
+			opacity: 0;
+
+		}
+
+		.slide-title {
+			background-color: #036a93;
+			padding: 5px 10px;
+			color: #fff
+		}
+
+		.slide-content {
+			font-size: 16px;
+			padding: 5px 10px;
+			line-height: normal;
+			margin-top: 20px;
+		}
+
+		.slide.active {
+			opacity: 1;
+		}
+
+		.slide-navigation {
+			position: absolute;
+			bottom: 10px;
+			left: 50%;
+			transform: translateX(-50%);
+			display: flex;
+			justify-content: center;
+			z-index: 3;
+		}
+
+		.slide-navigation span {
+			display: inline-block;
+			width: 10px;
+			height: 10px;
+			border-radius: 50%;
+			background-color: #677784;
+
+			margin: 0 5px;
+			cursor: pointer;
+		}
+
+		.slide-navigation span.active {
+			background-color: #036a93;
+
+		}
+
+		.slide-future {
+			z-index: 2;
+			position: absolute;
+			bottom: 0;
+			display: flex;
+			width: 100%;
+			align-items: center;
+			justify-content: space-between;
+			padding: 0 5px;
+			font-size: 25px;
+
+		}
+
+		.slide-future--next {
+			cursor: pointer;
+			color: #677784;
+		}
+
+		.slide-future--next::selection {
+			background: transparent;
+		}
+
+
+		.slide-future--next:hover {
+			color: #036a93;
+		}
+
+		.slide-future--prev {
+			cursor: pointer;
+			color: #677784;
+		}
+
+		.slide-future--prev::selection {
+			background: transparent;
+		}
+
+		.slide-future--prev:hover {
+			color: #036a93;
+		}
+
+		.comment-red {
+			color: #036a93;
+			font-style: italic;
+			font-size: 22px;
+			display: block;
+			width: 80%;
+			margin: 20px auto;
+		}
+
+		/* estilos pride- agregados */
+
+		#section-principal {
+
+			margin-top: 100px;
+
+		}
+
+		.title-image {
+			margin: 0 auto;
+			text-align: center;
+			display: block;
+		}
+
+		.star {
+			position: absolute;
+
+		}
+	</style>
+	<header id="w-header">
+		<div class="container__menu">
+			<!-- <div class="menu__button">                <div class="menu"> <button id="menuMobile"> <span></span> <span></span> <span></span> </button> </div>            </div> -->
+			<div class="menu__left"><a href="https://data.larepublica.pe/" rel="noopener" style="display: inline-block;"
+					target="_blank">
+					<picture>
+						<source id="w-sourceLogoDesktop" media="(min-width: 768px)"
+							srcset="https://larepublica.cronosmedia.glr.pe/data/2121/10/05/logo.png" />
+						<img id="w-sourceLogoMobile"
+							src="https://larepublica.cronosmedia.glr.pe/data/2121/10/05/logo.png" />
+					</picture>
+				</a></div>
+			<div class="menu__rigth"><span class="items_shared"> <a class="btn-fb btn-Social" data-social="facebook"
+						href="https://www.facebook.com/sharer/sharer.php?u=https://data.larepublica.pe/prestamos-por-aplicativos-en-peru-los-montadeudas-modalidad-mexicana-de-extorsion-por-apps-estafa-en-el-pais/"
+						id="id-btn-fb" rel="noopener"> </a> <a class="btn-twt btn-Social" data-social="twitter"
+						href="https://twitter.com/share?url=https://data.larepublica.pe/prestamos-por-aplicativos-en-peru-los-montadeudas-modalidad-mexicana-de-extorsion-por-apps-estafa-en-el-pais/&via=LRData"
+						id="id-btn-twt" rel="noopener"> </a> <a class="btn-wsp"
+						href="https://api.whatsapp.com/send?text=https://data.larepublica.pe/prestamos-por-aplicativos-en-peru-los-montadeudas-modalidad-mexicana-de-extorsion-por-apps-estafa-en-el-pais/"
+						id="id-btn-wsp" rel="noopener" target="_blank"> </a> </span></div>
+		</div>
+	</header>
+	<div id="container">
+
+		<section id="section-principal">
+			<img class="title-image" src="./images/loveislove.png" alt="Love is love">
+
+			<img class="star" style="top: 130px;
+			left: 30px;" src="./images/estrella.png">
+
+			<img class="star" style="top: 150px;
+			left: 20%;" src="./images/estrella.png">
+
+			<img class="star" style="top: 130px;
+			left: 35%;" src="./images/estrella.png">
+			<img class="star" style="top: 130px;
+			left: 70%;" src="./images/estrella.png">
+			<img class="star" style="top: 130px;
+			left: 30px;" src="./images/estrella.png">
+			<img class="star" style="top: 130px;
+			left: 30px;" src="./images/estrella.png">
+			<img class="star" style="top: 130px;
+			left: 30px;" src="./images/estrella.png">
+			<img class="star" style="top: 130px;
+			left: 30px;" src="./images/estrella.png">
+			<img class="star" style="top: 130px;
+			left: 30px;" src="./images/estrella.png">
+			<img class="star" style="top: 130px;
+			left: 30px;" src="./images/estrella.png">
+			<img class="star" style="top: 130px;
+			left: 30px;" src="./images/estrella.png">
+			<img class="star" style="top: 130px;
+			left: 30px;" src="./images/estrella.png">
+
+
+
+
+			<div class="headline">
+				Widget, Inc.
+			</div>
+			sdadasd
+
+	</div>
+	<div class="headline">
+		Widget, Inc.
+	</div>
+	<div class="headline">
+		Widget, Inc.
+	</div>
+	<div class="headline">
+		Un navegador web o browser, a través de su agente de usuario, lleva a cabo la lectura del código HTML de una
+		dirección web o url solicitada; la lectura de dicha página es secuencial (de arriba a abajo) y la disposición de
+		los componentes en pantalla dependerá del tipo de elemento que se trate:
+
+		elementos en línea (span, img, a y otros): ocupan solo el espacio necesario para mostrar el contenido interno de
+		los mismos,
+		elementos de bloque (p, div, h1, h2, fieldset y otros): siempre empiezan en una nueva línea y ocupan todo el
+		espacio disponible en pantalla, o dentro de su contenedor, hasta el final de la línea, aunque sus contenidos no
+		tengan tanto tamaño.
+
+		Todos se disponen de izquierda a derecha en pantalla, ocupan un espacio rectangular y, por defecto, en función
+		del contenido de los mismos y solo se dispondrá un elemento en una nueva línea cuando sea un elemento de blo
+	</div>
+	<div class="headline">
+		Widget, Inc.
+	</div>
+	<div class="headline">
+		Widget, Inc.
+	</div>
+	<div class="headline">
+		Un navegador web o browser, a través de su agente de usuario, lleva a cabo la lectura del código HTML de una
+		dirección web o url solicitada; la lectura de dicha página es secuencial (de arriba a abajo) y la disposición de
+		los componentes en pantalla dependerá del tipo de elemento que se trate:
+
+		elementos en línea (span, img, a y otros): ocupan solo el espacio necesario para mostrar el contenido interno de
+		los mismos,
+		elementos de bloque (p, div, h1, h2, fieldset y otros): siempre empiezan en una nueva línea y ocupan todo el
+		espacio disponible en pantalla, o dentro de su contenedor, hasta el final de la línea, aunque sus contenidos no
+		tengan tanto tamaño.
+
+		Todos se disponen de izquierda a derecha en pantalla, ocupan un espacio rectangular y, por defecto, en función
+		del contenido de los mismos y solo se dispondrá un elemento en una nueva línea cuando sea un elemento de blo,
+		Inc.
+	</div>
+	<div class="headline">
+		Widget, Inc.
+		Un navegador web o browser, a través de su agente de usuario, lleva a cabo la lectura del código HTML de una
+		dirección web o url solicitada; la lectura de dicha página es secuencial (de arriba a abajo) y la disposición de
+		los componentes en pantalla dependerá del tipo de elemento que se trate:
+
+		elementos en línea (span, img, a y otros): ocupan solo el espacio necesario para mostrar el contenido interno de
+		los mismos,
+		elementos de bloque (p, div, h1, h2, fieldset y otros): siempre empiezan en una nueva línea y ocupan todo el
+		espacio disponible en pantalla, o dentro de su contenedor, hasta el final de la línea, aunque sus contenidos no
+		tengan tanto tamaño.
+
+		Todos se disponen de izquierda a derecha en pantalla, ocupan un espacio rectangular y, por defecto, en función
+		del contenido de los mismos y solo se dispondrá un elemento en una nueva línea cuando sea un elemento de blo
+		Un navegador web o browser, a través de su agente de usuario, lleva a cabo la lectura del código HTML de una
+		dirección web o url solicitada; la lectura de dicha página es secuencial (de arriba a abajo) y la disposición de
+		los componentes en pantalla dependerá del tipo de elemento que se trate:
+
+		elementos en línea (span, img, a y otros): ocupan solo el espacio necesario para mostrar el contenido interno de
+		los mismos,
+		elementos de bloque (p, div, h1, h2, fieldset y otros): siempre empiezan en una nueva línea y ocupan todo el
+		espacio disponible en pantalla, o dentro de su contenedor, hasta el final de la línea, aunque sus contenidos no
+		tengan tanto tamaño.
+
+		Todos se disponen de izquierda a derecha en pantalla, ocupan un espacio rectangular y, por defecto, en función
+		del contenido de los mismos y solo se dispondrá un elemento en una nueva línea cuando sea un elemento de blo
+		Un navegador web o browser, a través de su agente de usuario, lleva a cabo la lectura del código HTML de una
+		dirección web o url solicitada; la lectura de dicha página es secuencial (de arriba a abajo) y la disposición de
+		los componentes en pantalla dependerá del tipo de elemento que se trate:
+
+		elementos en línea (span, img, a y otros): ocupan solo el espacio necesario para mostrar el contenido interno de
+		los mismos,
+		elementos de bloque (p, div, h1, h2, fieldset y otros): siempre empiezan en una nueva línea y ocupan todo el
+		espacio disponible en pantalla, o dentro de su contenedor, hasta el final de la línea, aunque sus contenidos no
+		tengan tanto tamaño.
+
+		Todos se disponen de izquierda a derecha en pantalla, ocupan un espacio rectangular y, por defecto, en función
+		del contenido de los mismos y solo se dispondrá un elemento en una nueva línea cuando sea un elemento de blo
+		Un navegador web o browser, a través de su agente de usuario, lleva a cabo la lectura del código HTML de una
+		dirección web o url solicitada; la lectura de dicha página es secuencial (de arriba a abajo) y la disposición de
+		los componentes en pantalla dependerá del tipo de elemento que se trate:
+
+		elementos en línea (span, img, a y otros): ocupan solo el espacio necesario para mostrar el contenido interno de
+		los mismos,
+		elementos de bloque (p, div, h1, h2, fieldset y otros): siempre empiezan en una nueva línea y ocupan todo el
+		espacio disponible en pantalla, o dentro de su contenedor, hasta el final de la línea, aunque sus contenidos no
+		tengan tanto tamaño.
+
+		Todos se disponen de izquierda a derecha en pantalla, ocupan un espacio rectangular y, por defecto, en función
+		del contenido de los mismos y solo se dispondrá un elemento en una nueva línea cuando sea un elemento de blo
+
+	</div>
+	<div class="headline">
+		Widget, Inc.
+	</div>
+	<div>asdadasd
+		Un navegador web o browser, a través de su agente de usuario, lleva a cabo la lectura del código HTML de una
+		dirección web o url solicitada; la lectura de dicha página es secuencial (de arriba a abajo) y la disposición de
+		los componentes en pantalla dependerá del tipo de elemento que se trate:
+
+		elementos en línea (span, img, a y otros): ocupan solo el espacio necesario para mostrar el contenido interno de
+		los mismos,
+		elementos de bloque (p, div, h1, h2, fieldset y otros): siempre empiezan en una nueva línea y ocupan todo el
+		espacio disponible en pantalla, o dentro de su contenedor, hasta el final de la línea, aunque sus contenidos no
+		tengan tanto tamaño.
+
+		Todos se disponen de izquierda a derecha en pantalla, ocupan un espacio rectangular y, por defecto, en función
+		del contenido de los mismos y solo se dispondrá un elemento en una nueva línea cuando sea un elemento de blo
+	</div>
+	</section>
+	</div>
+	<script>
+		ScrollReveal().reveal('.headline');
+	</script>
+	<script>
+		var h = document.getElementById("w-header"),
+			s = document.getElementById("w-section"),
+			sourceLogoMobile = document.getElementById("w-sourceLogoMobile"),
+			sourceLogoDesktop = document.getElementById("w-sourceLogoDesktop"),
+			socialMediaWhite =
+				"https://s3.amazonaws.com/glr-demo/2020/04/13/icons-white-1586816732.svg",
+			socialMediaColor =
+				"https://s3.amazonaws.com/glr-demo/2020/04/13/icons-color-1586815843.svg",
+			srcsetImgWhite =
+				"https://s3.amazonaws.com/glr-demo/2020/04/14/logo-lrdata-desktop-1586903791.svg",
+			srcImgWhite =
+				"https://s3.amazonaws.com/glr-demo/2020/04/14/logo-lrdata-mobile-1586898504.svg",
+			srcsetImgRed =
+				"https://s3.amazonaws.com/glr-demo/2020/04/14/logo-lrdata-red-desktop-1586904422.svg",
+			srcImgRed =
+				"https://s3.amazonaws.com/glr-demo/2020/04/14/logo-lrdata-red-mobile-1586898360.svg",
+			sum = s.getBoundingClientRect().top,
+			elementsFixed = document.querySelectorAll(".contentFixedElement"),
+			blockFixed = document.querySelectorAll(".block-fixed"),
+			textFixed = document.querySelectorAll(".text-fixed"),
+			init = [],
+			end = [],
+			initImg = [],
+			endImg = [],
+			imgsFixed = [],
+			parrafFixed = [],
+			diff = 0,
+			playing = !1;
+
+		function initFixedElements() {
+			elementsFixed.forEach((e, t) => {
+				(initImg[t] = new Array(2)),
+					(endImg[t] = new Array(2)),
+					(parrafFixed[t] = new Array(2));
+				var i = textFixed[t].offsetHeight;
+				(init[t] = elementsFixed[t].offsetTop),
+					(end[t] = init[t] + textFixed[t].offsetHeight - window.innerHeight),
+					(elementsFixed[t].style.height = i + "px"),
+					(imgsFixed[t] = e.children[0].children[0].children);
+				for (var o = 0; o < textFixed[t].children.length; o++)
+					(parrafFixed[t][o] = textFixed[t].children[o]),
+						(initImg[t][o] = parrafFixed[t][o].offsetTop + init[t]),
+						(endImg[t][o] = initImg[t][o] + parrafFixed[t][o].offsetHeight);
+			});
+		}
+		(document.onscroll = function () {
+
+			var e = window.pageYOffset;
+			document.querySelector(".articulo_especial") &&
+				(diff = document.querySelector(".articulo_especial").offsetTop),
+				elementsFixed.forEach((t, i) => {
+					if (
+						((init[i] = elementsFixed[i].offsetTop),
+							(end[i] =
+								elementsFixed[i].offsetTop +
+								elementsFixed[i].offsetHeight -
+								window.innerHeight),
+							e - diff > init[i])
+					)
+						if (e - diff < end[i]) {
+							if (
+								(blockFixed[i].classList.remove("absolute_bottom"),
+									blockFixed[i].classList.add("fixed_top"),
+									imgsFixed[i])
+							)
+								for (var o = 0; o < imgsFixed[i].length; o++)
+									if (e - diff > initImg[i][o] && e - diff < endImg[i][o]) {
+										var s;
+										if (imgsFixed[i][o].querySelector("video"))
+											((s = imgsFixed[i][o].querySelector(
+												"video"
+											)).autoplay = !0),
+												(!playing || (playing && s.paused)) &&
+												(s.play(), (playing = !0));
+										else
+											(s = elementsFixed[i].querySelectorAll(
+												"video"
+											)).forEach((e, t) => {
+												e.pause();
+											});
+										imgsFixed[i][o].classList.add("visible"),
+											imgsFixed[i][o].classList.remove("invisible");
+									} else
+										imgsFixed[i][o].classList.remove("visible"),
+											imgsFixed[i][o].classList.add("invisible");
+						} else
+							blockFixed[i].classList.remove("fixed_top"),
+								blockFixed[i].classList.add("absolute_bottom");
+					else
+						blockFixed[i].classList.remove("absolute_bottom"),
+							blockFixed[i].classList.remove("fixed_top");
+				});
+		}),
+			(window.onload = function () {
+				initFixedElements();
+				let e = document.querySelectorAll(".btn-Social");
+				Object.keys(e).map(t => {
+					e[t].onclick = function () {
+						(e => {
+							let t = null;
+							switch (e) {
+								case "facebook":
+									t = "https://www.facebook.com/sharer/sharer.php?u=";
+									break;
+								case "twitter":
+									t = "https://twitter.com/share?url=";
+							}
+
+
+							let text = document.querySelector('meta[name="description"]')
+								.content;
+
+							document
+								.getElementsByClassName("btn-wsp")[0]
+								.setAttribute(
+									"href",
+									"https://api.whatsapp.com/send?text=" + text + " " + url
+								);
+
+							const i = "twitter" == e ? "&text=" + text : "";
+
+							window.open(t + url + i, e + "-popup", "height=350,width=600");
+						})(e[t].getAttribute("data-social"));
+					};
+				});
+			});
+	</script>
+</body>
+
+</html>
