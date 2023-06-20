@@ -70,7 +70,7 @@
 			transition: all 0.5s ease;
 			padding: 15px 42px;
 			background: black;
-			border-bottom: 4px solid #036a93;
+
 		}
 
 		header span {
@@ -145,8 +145,8 @@
 		}
 
 		h2 {
-			font-size: 2.2rem;
-			font-family: 'DM Sans', sans-serif;
+			font-size: 3rem;
+			font-family: 'Paytone One', sans-serif;
 			width: 100%;
 			/* margin: -110px auto 25px; */
 			/* padding-top: 120px; */
@@ -1677,7 +1677,7 @@
 		}
 
 		.subtitle {
-			font-size: 16px;
+			font-size: 20px;
 			font-family: 'Poppins', sans-serif;
 			margin: 0 auto;
 			margin-top: 100px;
@@ -1698,8 +1698,8 @@
 
 		.nube {
 			position: absolute;
-			-webkit-filter: drop-shadow(-1px -1px 10px rgba(0, 0, 0, 0.3));
-			filter: drop-shadow(-1px -1px 10px rgba(0, 0, 0, 0.3));
+			-webkit-filter: drop-shadow(-1px -1px 10px rgba(0, 0, 0, 0.2));
+			filter: drop-shadow(-1px -1px 10px rgba(0, 0, 0, 0.2));
 			z-index: 2;
 		}
 
@@ -1709,34 +1709,35 @@
 		}
 
 		.nube-2 {
-			top: 55%;
+			top: 60%;
 			left: 7.5%;
 			z-index: 3;
 		}
 
-		.nube-3{
+		.nube-3 {
 			top: 55%;
 			left: -12.5%;
 			z-index: 5;
 		}
 
-		.nube-4{
+		.nube-4 {
 			top: 42%;
 			right: -5.5%;
 		}
 
-		.nube-5{
-			top: 55%;
+		.nube-5 {
+			top: 60%;
 			right: 7.5%;
-			z-index: 5;
+			z-index: 3;
 		}
 
-		.nube-6{
+		.nube-6 {
 			top: 55%;
 			right: -12.5%;
+			z-index: 6;
 		}
 
-		
+
 
 		@keyframes respirando {
 			0% {
@@ -1749,33 +1750,99 @@
 		}
 
 
-		.banderas{
+		.banderas {
 			z-index: 3;
 			position: absolute;
-			
-		
+
+
 		}
 
-		.bandera-lgtb{
-			top: 52.5%;
+		.bandera-lgtb {
+			top: 57.5%;
 			left: 27.5%;
 			z-index: 2;
 			transform: rotate(-10deg);
 		}
 
-		.bandera-trans{
-			top: 52.5%;
+		.bandera-trans {
+			top: 55%;
 			left: 12.5%;
-			
+			width: 125px;
+			height: 122px;
 		}
 
-		.bandera-bisexual{
-			top: 52%;
+		.bandera-bisexual {
+			top: 57.5%;
 			right: 25%;
-			
-			transform: rotate(10deg) scaleX(-1);
-			
+			width: 125px;
+			height: 122px;
+			transform: rotate(5deg) scaleX(-1);
 			z-index: 2;
+		}
+
+		.bandera-lesbian {
+			top: 54%;
+			right: 12.5%;
+			transform: rotate(1deg) scaleX(-1);
+			z-index: 4;
+			width: 125px;
+			height: 122px;
+		}
+
+		#pride-road {
+			min-height: 100vh;
+		}
+
+		.container-title-road {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			padding: 25px;
+			margin-top: 50px;
+
+		}
+
+		.title-road {
+			text-align: center;
+			display: inline-block;
+			width: auto;
+			padding-bottom: 5px;
+			position: relative;
+		}
+
+		.title-road:before {
+
+			content: "";
+			position: absolute;
+			width: 50%;
+			height: 1px;
+			bottom: 0;
+			left: 25%;
+			border-bottom: 3px dashed #000;
+
+
+		}
+
+		.title-road:after {
+			content: "";
+			position: absolute;
+			width: 50%;
+			height: 1px;
+			top: 0;
+			left: 25%;
+			border-bottom: 3px dashed #000;
+
+		}
+
+		.resume {
+			font-size: 18px;
+			font-family: 'Poppins', sans-serif;
+			margin: 0 auto;
+			margin-top: 200px;
+			width: 600px;
+			text-align: center;
+
+
 		}
 	</style>
 	<header id="w-header">
@@ -1848,139 +1915,42 @@
 			<img class="banderas bandera-trans" src="./images/banderas/banderatrans.png" alt="bandera trans">
 			<img class="banderas bandera-lgtb" src="./images/banderas/lgtb.png" alt="bandera LGTB">
 			<img class="banderas bandera-bisexual" src="./images/banderas/banderabisexual.png" alt="bandera bisexual">
+			<img class="banderas bandera-lesbian" src="./images/banderas/banderalesbian.png" alt="bandera lesbian">
 
 		</section>
-
+		<section id="pride-road">
+			<div class="resume">
+				65% de la población LGTBIQ+ siente que la sociedad peruana no es respetuosa
+				a la orientación sexual / identidad de género. <br> Esto suecede por la falta
+				de conocimiento hacia estos conceptos. Por ello, te los presentamos de manera sencila
+			</div>
+			<img class="arrow" src="./images/flecha.png" alt="Hacia abajo">
+			<div class="container-title-road">
+				<h2 class="title-road">DESCUBRIENDO LA SEXUALIDAD</h2>
+			</div>
+		</section>
 	</div>
 
-	<div class="headline">
-		Widget, Inc.
-	</div>
-	<div class="headline">
-		Un navegador web o browser, a través de su agente de usuario, lleva a cabo la lectura del código HTML de una
-		dirección web o url solicitada; la lectura de dicha página es secuencial (de arriba a abajo) y la disposición de
-		los componentes en pantalla dependerá del tipo de elemento que se trate:
 
-		elementos en línea (span, img, a y otros): ocupan solo el espacio necesario para mostrar el contenido interno de
-		los mismos,
-		elementos de bloque (p, div, h1, h2, fieldset y otros): siempre empiezan en una nueva línea y ocupan todo el
-		espacio disponible en pantalla, o dentro de su contenedor, hasta el final de la línea, aunque sus contenidos no
-		tengan tanto tamaño.
-
-		Todos se disponen de izquierda a derecha en pantalla, ocupan un espacio rectangular y, por defecto, en función
-		del contenido de los mismos y solo se dispondrá un elemento en una nueva línea cuando sea un elemento de blo
-	</div>
-	<div class="headline">
-		Widget, Inc.
-	</div>
-	<div class="headline">
-		Widget, Inc.
-	</div>
-	<div class="headline">
-		Un navegador web o browser, a través de su agente de usuario, lleva a cabo la lectura del código HTML de una
-		dirección web o url solicitada; la lectura de dicha página es secuencial (de arriba a abajo) y la disposición de
-		los componentes en pantalla dependerá del tipo de elemento que se trate:
-
-		elementos en línea (span, img, a y otros): ocupan solo el espacio necesario para mostrar el contenido interno de
-		los mismos,
-		elementos de bloque (p, div, h1, h2, fieldset y otros): siempre empiezan en una nueva línea y ocupan todo el
-		espacio disponible en pantalla, o dentro de su contenedor, hasta el final de la línea, aunque sus contenidos no
-		tengan tanto tamaño.
-
-		Todos se disponen de izquierda a derecha en pantalla, ocupan un espacio rectangular y, por defecto, en función
-		del contenido de los mismos y solo se dispondrá un elemento en una nueva línea cuando sea un elemento de blo,
-		Inc.
-	</div>
-	<div class="headline">
-		Widget, Inc.
-		Un navegador web o browser, a través de su agente de usuario, lleva a cabo la lectura del código HTML de una
-		dirección web o url solicitada; la lectura de dicha página es secuencial (de arriba a abajo) y la disposición de
-		los componentes en pantalla dependerá del tipo de elemento que se trate:
-
-		elementos en línea (span, img, a y otros): ocupan solo el espacio necesario para mostrar el contenido interno de
-		los mismos,
-		elementos de bloque (p, div, h1, h2, fieldset y otros): siempre empiezan en una nueva línea y ocupan todo el
-		espacio disponible en pantalla, o dentro de su contenedor, hasta el final de la línea, aunque sus contenidos no
-		tengan tanto tamaño.
-
-		Todos se disponen de izquierda a derecha en pantalla, ocupan un espacio rectangular y, por defecto, en función
-		del contenido de los mismos y solo se dispondrá un elemento en una nueva línea cuando sea un elemento de blo
-		Un navegador web o browser, a través de su agente de usuario, lleva a cabo la lectura del código HTML de una
-		dirección web o url solicitada; la lectura de dicha página es secuencial (de arriba a abajo) y la disposición de
-		los componentes en pantalla dependerá del tipo de elemento que se trate:
-
-		elementos en línea (span, img, a y otros): ocupan solo el espacio necesario para mostrar el contenido interno de
-		los mismos,
-		elementos de bloque (p, div, h1, h2, fieldset y otros): siempre empiezan en una nueva línea y ocupan todo el
-		espacio disponible en pantalla, o dentro de su contenedor, hasta el final de la línea, aunque sus contenidos no
-		tengan tanto tamaño.
-
-		Todos se disponen de izquierda a derecha en pantalla, ocupan un espacio rectangular y, por defecto, en función
-		del contenido de los mismos y solo se dispondrá un elemento en una nueva línea cuando sea un elemento de blo
-		Un navegador web o browser, a través de su agente de usuario, lleva a cabo la lectura del código HTML de una
-		dirección web o url solicitada; la lectura de dicha página es secuencial (de arriba a abajo) y la disposición de
-		los componentes en pantalla dependerá del tipo de elemento que se trate:
-
-		elementos en línea (span, img, a y otros): ocupan solo el espacio necesario para mostrar el contenido interno de
-		los mismos,
-		elementos de bloque (p, div, h1, h2, fieldset y otros): siempre empiezan en una nueva línea y ocupan todo el
-		espacio disponible en pantalla, o dentro de su contenedor, hasta el final de la línea, aunque sus contenidos no
-		tengan tanto tamaño.
-
-		Todos se disponen de izquierda a derecha en pantalla, ocupan un espacio rectangular y, por defecto, en función
-		del contenido de los mismos y solo se dispondrá un elemento en una nueva línea cuando sea un elemento de blo
-		Un navegador web o browser, a través de su agente de usuario, lleva a cabo la lectura del código HTML de una
-		dirección web o url solicitada; la lectura de dicha página es secuencial (de arriba a abajo) y la disposición de
-		los componentes en pantalla dependerá del tipo de elemento que se trate:
-
-		elementos en línea (span, img, a y otros): ocupan solo el espacio necesario para mostrar el contenido interno de
-		los mismos,
-		elementos de bloque (p, div, h1, h2, fieldset y otros): siempre empiezan en una nueva línea y ocupan todo el
-		espacio disponible en pantalla, o dentro de su contenedor, hasta el final de la línea, aunque sus contenidos no
-		tengan tanto tamaño.
-
-		Todos se disponen de izquierda a derecha en pantalla, ocupan un espacio rectangular y, por defecto, en función
-		del contenido de los mismos y solo se dispondrá un elemento en una nueva línea cuando sea un elemento de blo
-
-	</div>
-	<div class="headline">
-		Widget, Inc.
-	</div>
-	<div>asdadasd
-		Un navegador web o browser, a través de su agente de usuario, lleva a cabo la lectura del código HTML de una
-		dirección web o url solicitada; la lectura de dicha página es secuencial (de arriba a abajo) y la disposición de
-		los componentes en pantalla dependerá del tipo de elemento que se trate:
-
-		elementos en línea (span, img, a y otros): ocupan solo el espacio necesario para mostrar el contenido interno de
-		los mismos,
-		elementos de bloque (p, div, h1, h2, fieldset y otros): siempre empiezan en una nueva línea y ocupan todo el
-		espacio disponible en pantalla, o dentro de su contenedor, hasta el final de la línea, aunque sus contenidos no
-		tengan tanto tamaño.
-
-		Todos se disponen de izquierda a derecha en pantalla, ocupan un espacio rectangular y, por defecto, en función
-		del contenido de los mismos y solo se dispondrá un elemento en una nueva línea cuando sea un elemento de blo
-	</div>
-	</section>
-	</div>
 	<script>
-	
+
 		ScrollReveal().reveal('.headline');
 		let images = document.getElementsByClassName('nube');
-		new simpleParallax(images,{
+		new simpleParallax(images, {
 			scale: 1.2,
 			orientation: 'right',
 			overflow: true
 		});
 
 		let stars = document.getElementsByClassName('star')
-		new simpleParallax(stars,{
+		new simpleParallax(stars, {
 			scale: 1.5,
 			orientation: 'up',
 			overflow: true
 		})
 
 		let interrogacion = document.querySelector('.interrogacion')
-		new simpleParallax(interrogacion,{
+		new simpleParallax(interrogacion, {
 			scale: 2,
 			overflow: true,
 			orientation: 'down'
@@ -1988,14 +1958,14 @@
 
 
 		let pride = document.querySelector('.pride')
-		new simpleParallax(pride,{
+		new simpleParallax(pride, {
 			scale: 2,
 			overflow: true,
 			orientation: 'down'
 		})
 
 		let subtitlePride = document.querySelector('.subtitle')
-		new simpleParallax (subtitlePride,{
+		new simpleParallax(subtitlePride, {
 			scale: 1.5,
 			overflow: true,
 			orientation: 'down',
