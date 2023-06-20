@@ -1609,7 +1609,7 @@
 
 		.interrogacion {
 			top: 225px;
-			left: 25%;
+			left: 20%;
 			position: absolute;
 			z-index: -1;
 		}
@@ -1626,7 +1626,7 @@
 
 		.pride {
 			top: 240px;
-			right: 25%;
+			right: 20%;
 			position: absolute;
 			z-index: -1;
 		}
@@ -1682,12 +1682,12 @@
 			margin: 0 auto;
 			margin-top: 100px;
 			text-align: center;
-
+			z-index: 10;
 		}
 
 		.arrow {
 			margin: 0 auto;
-			margin-top: 150px;
+			margin-top: 175px;
 			text-align: center;
 			display: block;
 			animation-name: respirando;
@@ -1700,7 +1700,7 @@
 			position: absolute;
 			-webkit-filter: drop-shadow(-1px -1px 10px rgba(0, 0, 0, 0.3));
 			filter: drop-shadow(-1px -1px 10px rgba(0, 0, 0, 0.3));
-			z-index: -1;
+			z-index: 2;
 		}
 
 		.nube-1 {
@@ -1711,12 +1711,13 @@
 		.nube-2 {
 			top: 55%;
 			left: 7.5%;
-
+			z-index: 3;
 		}
 
 		.nube-3{
 			top: 55%;
 			left: -12.5%;
+			z-index: 5;
 		}
 
 		.nube-4{
@@ -1727,6 +1728,7 @@
 		.nube-5{
 			top: 55%;
 			right: 7.5%;
+			z-index: 5;
 		}
 
 		.nube-6{
@@ -1742,8 +1744,38 @@
 			}
 
 			50% {
-				transform: scale(1.1);
+				transform: scale(1.01);
 			}
+		}
+
+
+		.banderas{
+			z-index: 3;
+			position: absolute;
+			
+		
+		}
+
+		.bandera-lgtb{
+			top: 52.5%;
+			left: 27.5%;
+			z-index: 2;
+			transform: rotate(-10deg);
+		}
+
+		.bandera-trans{
+			top: 52.5%;
+			left: 12.5%;
+			
+		}
+
+		.bandera-bisexual{
+			top: 52%;
+			right: 25%;
+			
+			transform: rotate(10deg) scaleX(-1);
+			
+			z-index: 2;
 		}
 	</style>
 	<header id="w-header">
@@ -1788,7 +1820,7 @@
 			<!-- <div class="title-principal">
 				<h1>¿NO ENTIENDES A LA COMUNIDAD LGTB, PERO QUIERES HACERLO?</h1>
 			</div> -->
-			<h1 class="headline">
+			<h1 class="headline h1-principal">
 				<svg viewBox="10 0 450 70">
 					<text class="svgStroke" x="10" y="45">¿NO ENTIENDES A LA</text>
 					<text class="svgText" x="10" y="45">¿NO ENTIENDES A LA</text>
@@ -1806,15 +1838,16 @@
 				Sigue el camino y descubre <br>
 				la sexualidad humana
 			</div>
-			<img class="arrow " src="./images/flecha.png" alt="Hacia abajo">
+			<img class="arrow" src="./images/flecha.png" alt="Hacia abajo">
 			<img class="nube nube-1 " src="./images/NUBES/nube1izquierda.png" alt="Una nube">
 			<img class="nube nube-2 " src="./images/NUBES/nube2izquierda.png" alt="Una nube">
 			<img class="nube nube-3 " src="./images/NUBES/nube3izquierda.png" alt="Una nube">
 			<img class="nube nube-4 " src="./images/NUBES/nube1derecha.png" alt="Una nube">
 			<img class="nube nube-5 " src="./images/NUBES/nube2derecha.png" alt="Una nube">
 			<img class="nube nube-6 " src="./images/NUBES/nube3derecha.png" alt="Una nube">
-
-
+			<img class="banderas bandera-trans" src="./images/banderas/banderatrans.png" alt="bandera trans">
+			<img class="banderas bandera-lgtb" src="./images/banderas/lgtb.png" alt="bandera LGTB">
+			<img class="banderas bandera-bisexual" src="./images/banderas/banderabisexual.png" alt="bandera bisexual">
 
 		</section>
 
@@ -1930,9 +1963,59 @@
 	</section>
 	</div>
 	<script>
+	
 		ScrollReveal().reveal('.headline');
+		let images = document.getElementsByClassName('nube');
+		new simpleParallax(images,{
+			scale: 1.2,
+			orientation: 'right',
+			overflow: true
+		});
+
+		let stars = document.getElementsByClassName('star')
+		new simpleParallax(stars,{
+			scale: 1.5,
+			orientation: 'up',
+			overflow: true
+		})
+
+		let interrogacion = document.querySelector('.interrogacion')
+		new simpleParallax(interrogacion,{
+			scale: 2,
+			overflow: true,
+			orientation: 'down'
+		})
+
+
+		let pride = document.querySelector('.pride')
+		new simpleParallax(pride,{
+			scale: 2,
+			overflow: true,
+			orientation: 'down'
+		})
+
+		let subtitlePride = document.querySelector('.subtitle')
+		new simpleParallax (subtitlePride,{
+			scale: 1.5,
+			overflow: true,
+			orientation: 'down',
+			maxTransition: 99
+		})
+		// var banderas = document.getElementsByClassName('banderas');
+		// new simpleParallax(banderas,{
+		// 	scale: 1.2,
+		// 	orientation: 'right',
+		// 	overflow: true
+		// });
+
+
 	</script>
 	<script>
+
+
+
+
+
 		var h = document.getElementById("w-header"),
 			s = document.getElementById("w-section"),
 			sourceLogoMobile = document.getElementById("w-sourceLogoMobile"),
