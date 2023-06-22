@@ -1847,7 +1847,119 @@
 			margin-top: 200px;
 			width: 600px;
 			text-align: center;
+		}
 
+		.road {
+			position: absolute;
+			/* top: 540px; */
+			width: 68vw;
+			top: 220vh;
+			right: 0;
+			bottom: 0;
+			margin: auto;
+			z-index: -1;
+		}
+
+		.linea-sex {
+			/* position: absolute;
+			
+			top: 180vh;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			margin: auto; */
+
+			margin: -20px auto 0 auto;
+			display: block;
+			z-index: 1;
+		}
+
+		.image-sex {
+			margin: 50px auto 0 auto;
+			display: block;
+			z-index: 3;
+		}
+
+		.container-planta-persona {
+			display: flex;
+			align-items: flex-end;
+			position: absolute;
+
+		}
+
+		.persona {
+			height: 291px;
+			width: 105px;
+			overflow: visible;
+		}
+
+
+		.persona-1 {
+			left: 30%;
+		}
+
+		.persona-2 {
+			left: 50%;
+			margin-top: 225px;
+			overflow: visible;
+		}
+
+		.persona-3 {
+			left: 70%;
+			margin-top: 355px;
+		}
+
+		.container-road {}
+
+		.texto-circular {
+			background-color: bisque;
+			text-align: center;
+			border-radius: 10px;
+			padding: 5px;
+			width: 100px;
+			box-shadow: -6px 6px 0px 0px rgba(0, 0, 0, 1);
+			-webkit-box-shadow: -6px 6px 0px 0px rgba(0, 0, 0, 1);
+			-moz-box-shadow: -6px 6px 0px 0px rgba(0, 0, 0, 1);
+		}
+
+		.texto-aviso {
+			width: 175px;
+			text-align: center;
+		}
+
+
+
+		.aviso-femenino {
+			position: relative;
+			left: 10%;
+			top: 20%;
+		}
+
+	
+		.texto-femenino {
+			position: relative;
+			left: 10%;
+			cursor: pointer;
+		}
+
+		.texto-femenino::after {
+			content: attr(data-content);
+
+			position: relative;
+
+			
+			display: inline-block;
+			left: 0;
+			top: 50px;
+			width: 250px;
+			color: #303030;
+			border-radius: 10px;
+			opacity: 0;
+		}
+
+		.texto-femenino:hover::after {
+
+			opacity: 1;
 
 		}
 	</style>
@@ -1931,8 +2043,33 @@
 				de conocimiento hacia estos conceptos. Por ello, te los presentamos de manera sencila
 			</div>
 			<img class="arrow" src="./images/flecha.png" alt="Hacia abajo">
-			<div class="container-title-road">
-				<h2 class="title-road">DESCUBRIENDO LA SEXUALIDAD</h2>
+			<div class="container-title-road ">
+				<h2 class="title-road headline">DESCUBRIENDO LA SEXUALIDAD</h2>
+			</div>
+			<div class="container-road">
+				<img src="./images/sexo.png" alt="Dice Sexo" class="image-sex">
+				<img src="./images/linea.png" alt="sss" class="linea-sex">
+				<img class="road" src="./images/caminoizq.png">
+				<div class="container-planta-persona persona-1">
+					<img class="persona" src="./images/sex/mujer.png">
+					<img class="planta planta-1" src="./images/planta.png" alt="planta">
+
+				</div>
+				<div class="container-planta-persona persona-2">
+					<img class="persona" src="./images/sex/hombre.png">
+					<img class="planta planta-1" src="./images/planta.png" alt="planta">
+				</div>
+				<div class="container-planta-persona persona-3">
+					<img class="persona" src="./images/sex/persona-intersex.png">
+					<img class="planta planta-1" src="./images/planta.png" alt="planta">
+
+				</div>
+
+				<span class="texto-aviso texto-femenino headline"
+					data-content="Persona que poseen características biológicas asociadas al cromosoma xx">
+					<img src="./images/sex/femenino.png" class="aviso-femenino">
+				</span>
+				
 			</div>
 		</section>
 	</div>
