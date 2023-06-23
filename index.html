@@ -1853,7 +1853,7 @@
 			position: absolute;
 			/* top: 540px; */
 			width: 68vw;
-			top: 220vh;
+			top: 230vh;
 			right: 0;
 			bottom: 0;
 			margin: auto;
@@ -1895,18 +1895,20 @@
 
 
 		.persona-1 {
-			left: 30%;
+			left: 35%;
+			margin-top: 10px;
 		}
 
 		.persona-2 {
-			left: 50%;
-			margin-top: 225px;
-			overflow: visible;
+			left: 52.5%;
+			margin-top: 85px;
+			
 		}
 
 		.persona-3 {
 			left: 70%;
-			margin-top: 355px;
+			margin-top: 165px;
+			width: 150px;
 		}
 
 		.container-road {}
@@ -1922,46 +1924,53 @@
 			-moz-box-shadow: -6px 6px 0px 0px rgba(0, 0, 0, 1);
 		}
 
+		.container-aviso{
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			width: 300px;
+			flex-wrap: wrap;
+			
+		}
+
 		.texto-aviso {
 			width: 175px;
 			text-align: center;
 		}
 
-
-
 		.aviso-femenino {
 			position: relative;
-			left: 10%;
-			top: 20%;
-		}
-
-	
-		.texto-femenino {
-			position: relative;
-			left: 10%;
-			cursor: pointer;
-		}
-
-		.texto-femenino::after {
-			content: attr(data-content);
-
-			position: relative;
-
 			
+		}
+
+		.texto-mujer{
+
+		}
+
+
+		.bolita{
+			border-radius: 50%;
+			width: 10px;
+			height: 10px;
+			position: relative;
+			left: 30px;
+			top: -10px;
 			display: inline-block;
-			left: 0;
-			top: 50px;
-			width: 250px;
-			color: #303030;
-			border-radius: 10px;
-			opacity: 0;
+			outline: 2px solid black;
+			background-color: black;
+			outline-offset: 2px;
 		}
 
-		.texto-femenino:hover::after {
-
-			opacity: 1;
+		.hidden{
+			visibility: hidden;
 
 		}
+		
+		.visto{
+			visibility: visible;
+		}
+
+
 	</style>
 	<header id="w-header">
 		<div class="container__menu">
@@ -2051,25 +2060,30 @@
 				<img src="./images/linea.png" alt="sss" class="linea-sex">
 				<img class="road" src="./images/caminoizq.png">
 				<div class="container-planta-persona persona-1">
-					<img class="persona" src="./images/sex/mujer.png">
+					<img class="persona persona-1" src="./images/sex/mujer.png">
 					<img class="planta planta-1" src="./images/planta.png" alt="planta">
 
 				</div>
 				<div class="container-planta-persona persona-2">
-					<img class="persona" src="./images/sex/hombre.png">
+					<img class="persona persona-2" src="./images/sex/hombre.png">
 					<img class="planta planta-1" src="./images/planta.png" alt="planta">
 				</div>
 				<div class="container-planta-persona persona-3">
-					<img class="persona" src="./images/sex/persona-intersex.png">
+					<img class="persona persona-3" src="./images/sex/persona-intersex.png">
 					<img class="planta planta-1" src="./images/planta.png" alt="planta">
 
 				</div>
-
-				<span class="texto-aviso texto-femenino headline"
-					data-content="Persona que poseen características biológicas asociadas al cromosoma xx">
-					<img src="./images/sex/femenino.png" class="aviso-femenino">
-				</span>
 				
+
+				<div class="container-aviso" >
+					<img src="./images/sex/femenino.png" class="aviso-femenino">
+					<div class="bolita"></div>
+					<div class="texto-aviso texto-mujer hidden">
+						Persona que poseen características biológicas asociadas al cromosoma xx
+					</div>
+				</div>
+
+			</div>
 			</div>
 		</section>
 	</div>
@@ -2113,6 +2127,23 @@
 			overflow: true,
 			orientation: 'down',
 			maxTransition: 99
+		})
+
+		
+		let avisoFemenino = document.querySelector('.aviso-femenino')
+		let texto = document.querySelector('.texto-mujer');
+
+		avisoFemenino.addEventListener(
+			'mouseenter', (e) => {
+				texto.classList.remove('hidden');
+				texto.classList.add('visto');
+				
+			}
+		)
+
+		avisoFemenino.addEventListener('mouseleave', (e)=>{
+			texto.classList.remove('visto');
+			texto.classList.add('hidden');
 		})
 		// var banderas = document.getElementsByClassName('banderas');
 		// new simpleParallax(banderas,{
