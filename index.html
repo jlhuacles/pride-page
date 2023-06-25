@@ -1860,6 +1860,13 @@
 			z-index: -1;
 		}
 
+		.road-genero {
+			position: absolute;
+			top: 290vh;
+			z-index: -1;
+
+		}
+
 		.linea-sex {
 			/* position: absolute;
 			
@@ -1879,7 +1886,11 @@
 			display: block;
 			z-index: 3;
 		}
+		.image-genero{
+			position: relative;
+			left: 300px;
 
+		}
 		.container-planta-persona {
 			display: flex;
 			align-items: flex-end;
@@ -1900,9 +1911,9 @@
 		}
 
 		.persona-2 {
-			left: 52.5%;
-			margin-top: 85px;
-			
+			left: 50%;
+			margin-top: 75px;
+
 		}
 
 		.persona-3 {
@@ -1911,7 +1922,9 @@
 			width: 150px;
 		}
 
-		.container-road {}
+		.container-road {
+			
+		}
 
 		.texto-circular {
 			background-color: bisque;
@@ -1924,53 +1937,91 @@
 			-moz-box-shadow: -6px 6px 0px 0px rgba(0, 0, 0, 1);
 		}
 
-		.container-aviso{
+		.container-aviso {
 			display: flex;
 			justify-content: center;
 			align-items: center;
 			width: 300px;
 			flex-wrap: wrap;
-			
+			gap: 10px;
+		}
+
+		.container-aviso img {
+			cursor: pointer;
+		}
+
+		.mujer {
+			position: absolute;
+			left: 350px;
+			margin-top: 140px;
+		}
+
+		.varon {
+			position: absolute;
+			left: 57%;
+			margin-top: 215px;
+			width: 400px;
+		}
+
+		.intersex {
+			position: absolute;
+			left: 60%;
+			margin-top: 415px;
+			width: 450px;
 		}
 
 		.texto-aviso {
-			width: 175px;
+			width: 205px;
 			text-align: center;
+			font-family: 'Poppins', sans-serif;
+			margin-top: 10px;
+		}
+
+		.container-orgullo {
+			position: absolute;
+			margin-left: 200px;
+			top: 225vh;
 		}
 
 		.aviso-femenino {
 			position: relative;
-			
-		}
-
-		.texto-mujer{
 
 		}
 
+		.container-paquete-estrella-1 {
+			position: relative;
+			top: -70px;
+			left: 80px;
+		}
 
-		.bolita{
+		.container-paquete-estrella-2 {
+			position: relative;
+			top: 10px;
+			left: 120px;
+		}
+
+
+		.bolita {
 			border-radius: 50%;
 			width: 10px;
 			height: 10px;
 			position: relative;
-			left: 30px;
-			top: -10px;
+			left: 0px;
+			top: 0px;
 			display: inline-block;
 			outline: 2px solid black;
 			background-color: black;
 			outline-offset: 2px;
 		}
 
-		.hidden{
+		.hidden {
 			visibility: hidden;
 
 		}
-		
-		.visto{
+
+		.visto {
 			visibility: visible;
 		}
-
-
 	</style>
 	<header id="w-header">
 		<div class="container__menu">
@@ -2059,6 +2110,7 @@
 				<img src="./images/sexo.png" alt="Dice Sexo" class="image-sex">
 				<img src="./images/linea.png" alt="sss" class="linea-sex">
 				<img class="road" src="./images/caminoizq.png">
+				<img class="road-genero" src="./images/GENERO/CAMINO.png">
 				<div class="container-planta-persona persona-1">
 					<img class="persona persona-1" src="./images/sex/mujer.png">
 					<img class="planta planta-1" src="./images/planta.png" alt="planta">
@@ -2073,9 +2125,9 @@
 					<img class="planta planta-1" src="./images/planta.png" alt="planta">
 
 				</div>
-				
 
-				<div class="container-aviso" >
+
+				<div class="container-aviso mujer">
 					<img src="./images/sex/femenino.png" class="aviso-femenino">
 					<div class="bolita"></div>
 					<div class="texto-aviso texto-mujer hidden">
@@ -2083,9 +2135,42 @@
 					</div>
 				</div>
 
+				<div class="container-aviso varon">
+					<div class="bolita"></div>
+					<img src="./images/sex/masculino.png" alt="Aviso" class="aviso-masculino">
+
+					<div class="texto-aviso texto-varon hidden">
+						Persona que poseen características biológicas asociadas al cromosoma xy
+					</div>
+				</div>
+				<div class="container-aviso intersex">
+					<img src="./images/sex/intersex.png" class="aviso-femenino">
+					<div class="bolita"></div>
+					<div class="texto-aviso texto-mujer hidden">
+						Persona que poseen características biológicas asociadas al cromosoma xx
+					</div>
+				</div>
+				<div class="container-orgullo">
+					<div class="container-paquete-estrella-1">
+						<img src="./images/estrella-sin-fondo.png" alt="estrella"
+							style="position:absolute;margin-top:50px;margin-left:-25px;">
+						<img src="./images/estrella-sin-fondo.png" alt="estrella" style="transform:scale(1.2)">
+
+					</div>
+					<img src="./images/orgullo.png" alt="orgullo">
+					<div class="container-paquete-estrella-2">
+						<img src="./images/estrella-sin-fondo.png" alt="estrella"
+							style="transform:scale(1.2);position:absolute;margin-top:50px;margin-left:-25px;">
+						<img src="./images/estrella-sin-fondo.png" alt="estrella">
+					</div>
+					
+				</div>
+				<img src="./images/sexo.png" alt="Dice Sexo" class="image-genero">
+
+
 			</div>
-			</div>
-		</section>
+	</div>
+	</section>
 	</div>
 
 
@@ -2129,22 +2214,42 @@
 			maxTransition: 99
 		})
 
-		
+
 		let avisoFemenino = document.querySelector('.aviso-femenino')
 		let texto = document.querySelector('.texto-mujer');
+		let avisoMasculino = document.querySelector('.aviso-masculino')
+		let textoVaron = document.querySelector('.texto-varon');
 
 		avisoFemenino.addEventListener(
 			'mouseenter', (e) => {
 				texto.classList.remove('hidden');
 				texto.classList.add('visto');
-				
+
 			}
 		)
 
-		avisoFemenino.addEventListener('mouseleave', (e)=>{
+		avisoFemenino.addEventListener('mouseleave', (e) => {
 			texto.classList.remove('visto');
 			texto.classList.add('hidden');
 		})
+
+
+		avisoMasculino.addEventListener(
+			'mouseenter', (e) => {
+				textoVaron.classList.remove('hidden');
+				textoVaron.classList.add('visto');
+			}
+		)
+
+		avisoMasculino.addEventListener(
+			'mouseleave', (e) => {
+				textoVaron.classList.remove('visto');
+				textoVaron.classList.add('hidden');
+			}
+		)
+
+
+
 		// var banderas = document.getElementsByClassName('banderas');
 		// new simpleParallax(banderas,{
 		// 	scale: 1.2,
