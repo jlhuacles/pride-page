@@ -26,6 +26,18 @@
 
 		}
 
+		* {
+			user-select: none;
+		}
+
+		*::selection {
+			background: none;
+		}
+
+		*::-moz-selection {
+			background: none;
+		}
+
 		html {
 			-ms-text-size-adjust: 100%;
 			font-size: 90.5%;
@@ -1702,42 +1714,67 @@
 			position: absolute;
 			-webkit-filter: drop-shadow(-1px -1px 10px rgba(0, 0, 0, 0.2));
 			filter: drop-shadow(-1px -1px 10px rgba(0, 0, 0, 0.2));
-			z-index: 2;
+
 		}
 
 		.nube-1 {
-			top: 12.5%;
-			left: -5.5%;
+			top: 54.5%;
+			left: -6.5%;
 		}
 
 		.nube-2 {
-			top: 18%;
+			top: 68%;
 			left: 7.5%;
 			z-index: 3;
 		}
 
 		.nube-3 {
-			top: 18%;
+			top: 68%;
 			left: -12.5%;
 			z-index: 5;
 		}
 
 		.nube-4 {
-			top: 12.5%;
-			right: -5.5%;
+			top: 52.5%;
+			right: -7.5%;
 		}
 
 		.nube-5 {
-			top: 18%;
+			top: 68%;
 			right: 7.5%;
 			z-index: 3;
 		}
 
 		.nube-6 {
-			top: 17%;
+			top: 62.5%;
 			right: -12.5%;
 			z-index: 6;
 		}
+
+		.nubege-1 {
+			bottom: -120px;
+			position: absolute;
+			left: -10%;
+		}
+
+		.nubege-2 {
+			bottom: -350px;
+			position: absolute;
+			left: -12.5%;
+		}
+
+		.nubege-3 {
+			bottom: -120px;
+			position: absolute;
+			right: -10%;
+		}
+
+		.nubege-4 {
+			bottom: -350px;
+			position: absolute;
+			right: -10%;
+		}
+
 
 
 
@@ -1760,21 +1797,21 @@
 		}
 
 		.bandera-lgtb {
-			top: 17.5%;
+			top: 65.5%;
 			left: 27.5%;
 			z-index: 2;
 			transform: rotate(-10deg);
 		}
 
 		.bandera-trans {
-			top: 18%;
+			top: 68%;
 			left: 12.5%;
 			width: 125px;
 			height: 122px;
 		}
 
 		.bandera-bisexual {
-			top: 17.5%;
+			top: 65.5%;
 			right: 25%;
 			width: 125px;
 			height: 122px;
@@ -1783,7 +1820,7 @@
 		}
 
 		.bandera-lesbian {
-			top: 17%;
+			top: 62%;
 			right: 12.5%;
 			transform: rotate(1deg) scaleX(-1);
 			z-index: 4;
@@ -1793,6 +1830,7 @@
 
 		#pride-road {
 			min-height: 100vh;
+			position: absolute;
 		}
 
 		.container-title-road {
@@ -1843,6 +1881,7 @@
 			margin-top: 200px;
 			width: 600px;
 			text-align: center;
+			z-index: 99;
 		}
 
 		.road {
@@ -1857,14 +1896,37 @@
 		}
 
 		.road-genero {
-			position: absolute;
+			position: relative;
 			top: 10vh;
 			z-index: -1;
+			width: 100vw;
+
+		}
+
+		.container-road {
+			position: relative;
+			width: 100vw;
 
 		}
 
 		.container-road-2 {
 			position: relative;
+			height: auto;
+			width: 100vw;
+
+		}
+
+		.container-road-3 {
+			position: absolute;
+			height: auto;
+			width: 100vw;
+		}
+
+		.road-orientacion {
+			position: absolute;
+			z-index: -1;
+			top: 450px;
+			width: 100vw;
 		}
 
 		.linea-sex {
@@ -1888,15 +1950,10 @@
 		}
 
 
-		.container-planta-persona {
-			display: flex;
-			align-items: flex-end;
-			position: absolute;
 
-		}
 
 		.persona {
-			
+
 			height: 300px;
 			width: 105px;
 			overflow: visible;
@@ -1920,30 +1977,96 @@
 			width: 150px;
 		}
 
-		.persona-4{
+		.persona-4 {
 			width: 150px;
-			left: 37.5%;
-			margin-top: 30px;
 		}
 
-		.persona-5{
+		.persona-5 {
 			left: 50%;
-			margin-top: 200px;
 			width: 150px;
 
 		}
 
-		.persona-6{
+		.persona-6 {
 			left: 65%;
-			margin-top: 220px;
-			width: 150px;
+			width: 130px;
 
+		}
+
+		.persona-7 {
+			left: 30%;
+
+			width: 120px;
+
+		}
+
+		.persona-8 {
+			left: 48%;
+
+			width: 120px
+		}
+
+		.persona-9 {
+			left: 68%;
+
+			width: 120px
+		}
+
+		.planta-2 {
+			position: relative;
+			bottom: 100px;
+			left: 30px;
 		}
 
 		.container-road {
 			min-height: 100vh;
 			position: relative;
 		}
+
+		.container-planta-persona {
+			display: flex;
+			align-items: flex-end;
+			position: absolute;
+
+		}
+
+
+		.container-planta-persona-persona-4 {
+			position: absolute;
+			top: 175px;
+			left: 35%;
+		}
+
+		.container-planta-persona-persona-5 {
+			position: absolute;
+			top: 476px;
+			left: 52%;
+		}
+
+		.container-planta-persona-persona-6 {
+			position: absolute;
+			top: 490px;
+			left: 65%;
+		}
+
+		.container-planta-persona-persona-7 {
+			position: absolute;
+			top: 1000px;
+			left: 35%;
+		}
+
+		.container-planta-persona-persona-8 {
+			position: absolute;
+			top: 990px;
+			left: 48%;
+		}
+
+		.container-planta-persona-persona-9 {
+			position: absolute;
+			top: 950px;
+			left: 72%;
+		}
+
 
 		.container-road-2 {}
 
@@ -1988,12 +2111,12 @@
 			position: absolute;
 			left: 57%;
 			margin-top: 480px;
-	
-			
-			
+
+
+
 		}
 
-		.intersex-nube{
+		.intersex-nube {
 			position: absolute;
 			right: 10%;
 			top: 200px;
@@ -2003,14 +2126,14 @@
 			width: 205px;
 			text-align: center;
 			font-family: 'Poppins', sans-serif;
-			font-size: 15.5px;
+			font-size: 16px;
 			margin-top: 10px;
 		}
 
 		.container-orgullo {
 			position: absolute;
 			margin-left: 200px;
-			top: 50%;
+			top: 60%;
 		}
 
 		.container-orgullo img {
@@ -2080,6 +2203,28 @@
 			height: auto;
 		}
 
+		.container-imagen-orientacion{
+			display: flex;
+			justify-content: center;
+			flex-wrap: wrap;
+			width: 153px;
+			left: 20%;
+			top: 420px;
+			position: absolute;
+		}
+
+
+		.container-imagen-quiengusta{
+			position: absolute;
+			display: flex;
+			justify-content: center;
+			flex-wrap: wrap;
+			width: 153px;
+			left: 1400px;
+			top: 580px;
+			
+
+		}
 		.image-genero {
 			cursor: pointer;
 		}
@@ -2091,10 +2236,10 @@
 
 
 		.texto-genero {
-			position: relative;
+			position: absolute;
 			left: 55%;
 			width: 230px;
-			top: 0px;
+			top: -50px;
 		}
 
 		.container-identidad-genero {
@@ -2108,6 +2253,16 @@
 
 		}
 
+		.container-expresion-genero {
+			display: flex;
+			justify-content: center;
+			flex-wrap: wrap;
+			width: 153px;
+			left: 29%;
+			top: 1650px;
+			position: absolute;
+		}
+
 		.texto-identidad {
 			width: 300px;
 			position: absolute;
@@ -2115,81 +2270,185 @@
 			left: 36%;
 		}
 
-		.image-identidad{
+		.image-identidad {
 			cursor: pointer;
 		}
 
-		.cisgenero{
+		.cisgenero {
 			position: absolute;
-			margin-top: 150px;
+			top: 300px;
 			left: 20%;
 		}
-		.texto-cisgenero{
+
+		.texto-cisgenero {
 			width: 400px;
 		}
 
-		.transgenero{
+		.transgenero {
 			position: absolute;
-			left: 50%;
-			margin-top: 125px;
+			left: 45%;
+			top: 300px;
 			width: 500px;
 		}
 
-		.texto-transgenero{
+		.texto-transgenero {
 			width: 300px;
 		}
 
-		.cisgenero-femenino{
+		.cisgenero-femenino {
 			position: absolute;
 			left: 35%;
 			top: 650px;
 		}
 
-		.cisgenero-masculino{
+		.cisgenero-masculino {
 			position: absolute;
 			left: 75%;
 			top: 650px;
 		}
 
-		.tresbanderas{
-			position: relative;
-			
+		.nube-triple {
+			position: absolute;
+			margin-top: 400px;
+			left: 10%;
+			width: auto;
+		}
+
+		.tresbanderas {
+
 			-webkit-filter: drop-shadow(-2px -2px 5px rgba(0, 0, 0, 0.5));
 			filter: drop-shadow(-2px -2px 5px rgba(0, 0, 0, 0.5));
-			margin-top: 400px;
+
 
 		}
 
-		.star-black{
+
+		.star-black {
 			position: absolute;
 		}
-		.black-1{
-			top: 275px;
-			left: 15%;
-			
+
+		.black-1 {
+			position: absolute;
+			top: -44px;
+			left: 50%;
+
 		}
 
-		.black-2{
-			top: 230px;
-			left: 30%;
+		.black-2 {
+			top: -68px;
+			left: 35%;
 		}
 
-		.black-3{
-			top: 640px;
+		.black-3 {
+			top: 240px;
 			left: 75%;
 		}
-		.black-4{
-			top: 690px;
+
+		.black-4 {
+			top: 290px;
 			left: 65%;
 		}
 
-		.nube-triple{
-			position: absolute ;
+		.nube-triple {
+			position: absolute;
 			left: 12%;
 			top: 300px;
+			display: inline;
 		}
-	
-	
+
+		.trans-nobinario {
+			position: absolute;
+			left: 18%;
+			top: 1150px;
+		}
+
+		.texto-trans-nobinario {
+			width: 700px;
+		}
+
+		.trans-femenino {
+			position: absolute;
+			left: 53%;
+			top: 1020px;
+		}
+
+		.trans-masculino {
+			position: absolute;
+			left: 56.5%;
+			top: 1100px;
+		}
+
+		.expresion-genero--imagen {
+			top: 1400px;
+			position: absolute;
+			left: 40%;
+		}
+
+		.expresion-genero--texto {
+			width: 800px;
+			position: absolute;
+			bottom: -200px;
+			left: 50%;
+			margin-left: calc(-800px/2);
+			font-family: 'Poppins', sans-serif;
+			font-size: 17px;
+			text-align: center;
+		}
+
+		.orientacion--texto{
+			width: 650px;
+			position: absolute;
+			top: 400px;
+			left: 50%;
+			margin-left: calc(-650px/2);
+			font-family: 'Poppins', sans-serif;
+			font-size: 17px;
+			text-align: center;
+		}
+
+		.pareja-hetero{
+			position: absolute;
+			display: flex;
+			top: 800px;
+			left: 45%;
+		}
+
+		.heterosexual{
+			position: absolute;
+			top: 840px;
+			left: 15%;
+			width: 500px;
+		}
+
+		.dos-estrellas{
+			position: absolute;
+			top: 800px;
+			left: 90%;
+		}
+
+
+		.tres-estrellas{
+			position: absolute;
+			top: 840px;
+			left: 5%;
+		}
+
+		.homosexual{
+			position: absolute;
+			left: 22.5%;
+			top: 1350px;
+		}
+
+		.texto-homosexual{
+			width: 400px;
+		}
+
+		.pareja-homosexual{
+			position: absolute;
+			left: 40%;
+			top: 1320px;
+		}
+
 	</style>
 	<header id="w-header">
 		<div class="container__menu">
@@ -2312,7 +2571,7 @@
 					</div>
 				</div>
 				<div class="container-aviso intersex">
-					
+
 					<img src="./images/sex/intersex.png" class="aviso-intersex">
 					<div class="bolita"></div>
 					<div class="texto-aviso texto-intersex hidden">
@@ -2351,21 +2610,21 @@
 					esas diferencias biológicas.</div>
 				<div class="texto-identidad texto-aviso hidden">La identidad de género es la vivencia interna
 					e individual del género tal como cada persona la siente, la cual podría corresponder
-					o no con el sexo asignado al nacer.	
+					o no con el sexo asignado al nacer.
 				</div>
 				<div class="container-identidad-genero">
 					<img src="./images/GENERO/IDENTIDAD-GENERO.png" alt="Dice Sexo"
 						class="image-identidad imagen-aviso--general">
 					<img src="./images/linea.png" class="linea-genero">
 				</div>
-				<div class="container-planta-persona persona-4 headline">
+				<div class="container-planta-persona-persona-4 headline">
 					<img class="persona persona-4" src="./images/GENERO/PERSONAS/PERSONA.png" alt="Persona">
 					<img class="planta planta-1" src="./images/GENERO/planta-genero.png" alt="planta">
 
 				</div>
 
 				<div class="container-aviso cisgenero">
-					
+
 					<img src="./images/GENERO/CUADROS/CISGENERO.png" class="aviso-cisgenero">
 					<div class="bolita"></div>
 					<div class="texto-aviso texto-cisgenero hidden">
@@ -2383,40 +2642,164 @@
 						típicamente se encuentran asociadas al sexo asignado al nacer.
 					</div>
 				</div>
-				<div class="container-planta-persona persona-5 headline">
+				<div class="container-planta-persona-persona-5 headline">
 					<img class="planta planta-1" src="./images/GENERO/planta-genero.png" alt="planta">
 
 					<img class="persona persona-5" src="./images/GENERO/PERSONAS/CISGENERO-FEMENINO.png" alt="Persona">
 				</div>
-				<div class="container-planta-persona persona-6 headline">
+				<div class="container-planta-persona-persona-6 headline">
 					<img class="persona persona-6" src="./images/GENERO/PERSONAS/CISGENERO-MASCULINO.png" alt="Persona">
 					<img class="planta planta-1" src="./images/GENERO/planta-genero.png" alt="planta">
 				</div>
 				<div class="container-aviso cisgenero-femenino">
-					
+
 					<img src="./images/GENERO/CUADROS/CISGENEROFEMENINO.png" class="aviso-cisgenero--femenino">
 					<div class="bolita"></div>
 					<div class="texto-aviso texto-cisgenero--femenino hidden">
-						La persona se identifica como una mujer y tiene 
-						sexo femenino.	
+						La persona se identifica como una mujer y tiene
+						sexo femenino.
 					</div>
 				</div>
 				<div class="container-aviso cisgenero-masculino">
 					<div class="bolita"></div>
-					<img src="./images/GENERO/CUADROS/CISGENEROMASCULINO.png" alt="Aviso" class="aviso-cisgenero--masculino">
+					<img src="./images/GENERO/CUADROS/CISGENEROMASCULINO.png" alt="Aviso"
+						class="aviso-cisgenero--masculino">
 
 					<div class="texto-aviso texto-cisgenero--masculino hidden">
 						La persona se identifica como un varón y tiene el sexo masculino
 					</div>
 				</div>
 				<div class="nube-triple">
-				<img src="./images/GENERO/estrella-negra.png" class="star-black black-1">
-				<img src="./images/GENERO/estrella-negra.png" class="star-black black-2">
-				<img src="./images/GENERO/estrella-negra.png" class="star-black black-3">
-				<img src="./images/GENERO/estrella-negra.png" class="star-black black-4">
-	
-				<img src="./images/GENERO/TRESBANDERAS.png" alt="Banderas" class="tresbanderas">
+
+					<img src="./images/GENERO/estrella-negra.png" class="star-black black-1">
+					<img src="./images/GENERO/estrella-negra.png" class="star-black black-2">
+
+					<img src="./images/GENERO/TRESBANDERAS.png" alt="Banderas" class="tresbanderas">
+					<img src="./images/GENERO/estrella-negra.png" class="star-black black-3">
+					<img src="./images/GENERO/estrella-negra.png" class="star-black black-4">
+
 				</div>
+
+				<div class="container-planta-persona-persona-7 headline">
+
+					<img class="persona persona-7" src="./images/GENERO/PERSONAS/TRANSNOBINARIO.png" alt="Persona">
+					<img class="planta planta-2" src="./images/GENERO/planta-genero.png" alt="planta">
+
+				</div>
+				<div class="container-planta-persona-persona-8 headline">
+					<img class="persona persona-8" src="./images/GENERO/PERSONAS/TRANSFEMENINO.png" alt="Persona">
+				</div>
+				<div class="container-planta-persona-persona-9 headline">
+					<img class="persona persona-9" src="./images/GENERO/PERSONAS/TRANSMASCULINO.png" alt="Persona">
+					<img class="planta planta-1" src="./images/GENERO/planta-genero.png" alt="planta">
+				</div>
+
+				<div class="container-aviso trans-nobinario">
+
+					<img src="./images/GENERO/CUADROS/TRANSNOBINARIO.png" class="aviso-trans-nobinario">
+					<div class="bolita"></div>
+					<div class="texto-aviso texto-trans-nobinario hidden">
+						Aquella persona que no se identifican con el género que les fue asignado al nacer, y transitan
+						hacia el género neutro o no binario, fuera de los límites de lo femenino y lo masculino, o en
+						ambos al mismo tiempo
+					</div>
+				</div>
+
+				<div class="container-aviso trans-femenino">
+					<div class="bolita"></div>
+
+					<img src="./images/GENERO/CUADROS/TRANSFEMENINOI.png" class="aviso-trans-femenino">
+
+				</div>
+				<div class="container-aviso trans-masculino">
+
+					<img src="./images/GENERO/CUADROS/TRANSMASCULINO.png" class="aviso-trans-masculino">
+					<div class="bolita"></div>
+					<div class="texto-aviso texto-trans-masculino hidden">
+						Aquella persona trans que construye su identidad transitando del masculino al femenino o del
+						femenino al masculino.
+					</div>
+				</div>
+				<div class="container-expresion-genero">
+					<img src="./images/GENERO/EXPRESIONGENERO.png" alt="Dice Sexo"
+						class="image-identidad imagen-aviso--general">
+					<img src="./images/linea.png" class="linea-genero">
+				</div>
+
+				<img src="./images/GENERO/EXPRESION-IMAGEN.png" alt="IMAGEN DE PERSONAS"
+					class="expresion-genero--imagen">
+				<img src="./images/GENERO/NUBE1.png" class="nube nubege-1">
+				<img src="./images/GENERO/NUBE2.png" class="nube nubege-2">
+				<img src="./images/GENERO/NUBE3.png" class="nube nubege-3">
+				<img src="./images/GENERO/NUBE4.png" class="nube nubege-4">
+				<div class="expresion-genero--texto">
+					Se entiende como la manifestación externa del género de una persona, a través de su aspecto físico,
+					que puede ser expresado a través del modo de vestir, el peinado o la utilización de artículos
+					cosméticos, manerismos, de la forma de hablar, de patrones de comportamiento personal, la
+					interacción social, de nombres o referencias personales, entre otros. La expresión de género de una
+					persona puede o no corresponder con su identidad de género auto-percibida.
+
+				</div>
+			</div>
+			<div class="container-road-3">
+				<img class="road-orientacion" src="./images/ORIENTACION/QUIEN-ME-GUSTA/CAMINO.png">
+				<div class="orientacion--texto">
+					Se refiere a la atracción emocional , afectiva y sexual por personas de un género
+					diferente al suyo, o de su mismo género, o de más de un género, así como a las relaciones emocionales
+					y/o sexuales con estas personas. La orientación sexual es un concepto amplio que crea espacio para la auto-identifación. 
+					Además, la orientación sexual puede variar a lo largo de un continuo, incluyendo la atracción exclusiva y no exclusiva al mismo sexo o al sexo opuesto.
+				</div>
+				
+				<div class="container-imagen-orientacion">
+					<img src="./images/ORIENTACION/ORIENTACION-SEXUAL.png" alt="Dice Sexo" class="image-orientacion imagen-aviso--general">
+					<img src="./images/linea.png" class="linea-genero">
+
+				</div>
+				<div class="container-imagen-quiengusta">
+					<img src="./images/ORIENTACION/QUIEN-ME-GUSTA/quien-me-gusta.png" alt="Dice Sexo" class="image-orientacion imagen-aviso--general">
+					<img src="./images/linea.png" class="linea-genero">
+
+				</div>
+
+				<div class="pareja-hetero">
+					<img src="./images/ORIENTACION/QUIEN-ME-GUSTA/HETEROSEXUAL/mujer.png" alt="" class="">
+					<img src="./images/ORIENTACION/QUIEN-ME-GUSTA/HETEROSEXUAL/CORAZON-LINEAS.png" alt="" class="">
+					<img src="./images/ORIENTACION/QUIEN-ME-GUSTA/HETEROSEXUAL/hombre.png" alt="" class="">
+
+				</div>
+				<img src="./images/ORIENTACION/QUIEN-ME-GUSTA/dos-estrellas.png" class="dos-estrellas">
+				<img src="./images/ORIENTACION/QUIEN-ME-GUSTA/tres-estrellas.png" class="tres-estrellas">
+
+
+
+				<div class="container-aviso heterosexual">
+					<div class="texto-aviso texto-heterosexual hidden" style="width: 300px;">
+						Mujeres que se sienten emocional, afectiva y sexualmente atraídas por hombres;
+						 u hombres que se sienten emocional, afectiva y sexualmente atraídas por mujeres.
+					</div>
+					<img src="./images/ORIENTACION/QUIEN-ME-GUSTA/HETEROSEXUAL/HETEROSEXUAL.png" class="aviso-heterosexual">
+					<div class="bolita"></div>
+					
+				</div>
+				<div class="container-aviso homosexual">
+					<div class="bolita"></div>
+
+					<img src="./images/ORIENTACION/QUIEN-ME-GUSTA/HOMOSEXUAL/HOMOSEXUAL.png" class="aviso-homosexual">
+					<div class="texto-aviso texto-homosexual hidden">
+						Se refiere a la atracción emocional, afectiva y sexual por personas de un mismo género.
+					</div>
+				</div>
+
+				<div class="pareja-homosexual">
+					<img src="./images/ORIENTACION/QUIEN-ME-GUSTA/HOMOSEXUAL/MUJER-1.png" alt="" class="">
+					<img src="./images/ORIENTACION/QUIEN-ME-GUSTA/HETEROSEXUAL/CORAZON-LINEAS.png" alt="" class="">
+					<img src="./images/ORIENTACION/QUIEN-ME-GUSTA/HOMOSEXUAL/MUJER-2.png" alt="" class="">
+
+				</div>
+
+
+
+				
 			</div>
 
 
@@ -2483,10 +2866,15 @@
 		let textoCisgeneroFemenino = document.querySelector('.texto-cisgenero--femenino');
 		let avisoCisgeneroMasculino = document.querySelector('.aviso-cisgenero--masculino');
 		let textoCisgeneroMasculino = document.querySelector('.texto-cisgenero--masculino');
-
-
-
-
+		let avisoTransNoBinario = document.querySelector('.aviso-trans-nobinario');
+		let textoTransNoBinario = document.querySelector('.texto-trans-nobinario');
+		let avisoTransFemenino = document.querySelector('.aviso-trans-femenino');
+		let avisoTransMasculino = document.querySelector('.aviso-trans-masculino');
+		let textoTransMasculino = document.querySelector('.texto-trans-masculino')
+		let avisoHeterosexual = document.querySelector('.aviso-heterosexual');
+		let textoHeterosexual = document.querySelector('.texto-heterosexual')
+		let avisoHomosexual = document.querySelector('.aviso-homosexual');
+		let textoHomosexual = document.querySelector('.texto-homosexual')
 
 
 		avisoFemenino.addEventListener(
@@ -2565,7 +2953,7 @@
 				textoCisgenero.classList.add('visto');
 			}
 		)
-		
+
 		avisoCisgenero.addEventListener(
 			'mouseleave', (e) => {
 				textoCisgenero.classList.remove('visto');
@@ -2594,7 +2982,7 @@
 				textoCisgeneroFemenino.classList.add('visto');
 			}
 		)
-		
+
 		avisoCisgeneroFemenino.addEventListener(
 			'mouseleave', (e) => {
 				textoCisgeneroFemenino.classList.remove('visto');
@@ -2608,11 +2996,82 @@
 				textoCisgeneroMasculino.classList.add('visto');
 			}
 		)
-		
+
 		avisoCisgeneroMasculino.addEventListener(
 			'mouseleave', (e) => {
 				textoCisgeneroMasculino.classList.remove('visto');
 				textoCisgeneroMasculino.classList.add('hidden');
+			}
+		)
+
+		avisoTransNoBinario.addEventListener(
+			'mouseenter', (e) => {
+				textoTransNoBinario.classList.remove('hidden');
+				textoTransNoBinario.classList.add('visto');
+			}
+		)
+
+		avisoTransNoBinario.addEventListener(
+			'mouseleave', (e) => {
+				textoTransNoBinario.classList.remove('visto');
+				textoTransNoBinario.classList.add('hidden');
+			}
+		)
+
+		avisoTransFemenino.addEventListener(
+			'mouseenter', (e) => {
+				textoTransMasculino.classList.remove('hidden');
+				textoTransMasculino.classList.add('visto');
+			}
+		)
+
+		avisoTransFemenino.addEventListener(
+			'mouseleave', (e) => {
+				textoTransMasculino.classList.remove('visto');
+				textoTransMasculino.classList.add('hidden');
+			}
+		)
+
+		avisoTransMasculino.addEventListener(
+			'mouseenter', (e) => {
+				textoTransMasculino.classList.remove('hidden');
+				textoTransMasculino.classList.add('visto');
+			}
+		)
+
+
+		avisoTransMasculino.addEventListener(
+			'mouseleave', (e) => {
+				textoTransMasculino.classList.remove('visto');
+				textoTransMasculino.classList.add('hidden');
+			}
+		)
+		
+		avisoHeterosexual.addEventListener(
+			'mouseenter', (e) => {
+				textoHeterosexual.classList.remove('hidden');
+				textoHeterosexual.classList.add('visto');
+			}
+		)
+
+		avisoHeterosexual.addEventListener(
+			'mouseleave', (e) => {
+				textoHeterosexual.classList.remove('visto');
+				textoHeterosexual.classList.add('hidden');
+			}
+		)
+
+		avisoHomosexual.addEventListener(
+			'mouseenter', (e) => {
+				textoHomosexual.classList.remove('hidden');
+				textoHomosexual.classList.add('visto');
+			}
+		)
+
+		avisoHomosexual.addEventListener(
+			'mouseleave', (e) => {
+				textoHomosexual.classList.remove('visto');
+				textoHomosexual.classList.add('hidden');
 			}
 		)
 
