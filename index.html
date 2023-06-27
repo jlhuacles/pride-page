@@ -2449,6 +2449,72 @@
 			top: 1320px;
 		}
 
+		.bandera-bisexual-gay{
+			position: absolute;
+			left: 18%;
+			top: 1700px;
+		}
+		.estrellas-negras-1{
+			position: absolute;
+			left: 14%;
+			top: 1650px;
+		}
+
+		.bandera-lesbiana{
+			position: absolute;
+			right:10%;
+			top: 120vh;
+		}
+
+		.lesbiana{
+			position: absolute;
+			left: 68.5%;
+			top: 1350px;
+		}
+
+		.pareja-gay{
+			position: absolute;
+			left: 55%;
+			top: 1800px;
+		}
+
+		.gay{
+			position: absolute;
+			left: 38.5%;
+			top: 1850px;
+
+		}
+
+		.texto-gay{
+			width: 500px;
+		}
+
+		.bisexual{
+			position: absolute;
+			left: 18.5%;
+			top: 2010px;
+		}
+
+		.texto-bisexual{
+			width: 500px;
+		}
+
+		.pareja-bisexual{
+			position: absolute;
+			left: 55%;
+			top: 2000px;
+		}
+
+		.corazon-linea{
+			position:absolute;
+			z-index: -1;
+			
+		}
+
+		.persona-bi-2{
+			margin-left: 200px;
+		}
+
 	</style>
 	<header id="w-header">
 		<div class="container__menu">
@@ -2797,8 +2863,52 @@
 
 				</div>
 
+				<img src="./images/ORIENTACION/QUIEN-ME-GUSTA/BANDERA-BISEXUAL-GAY.png" class="bandera-bisexual-gay">
+				<img src="./images/ORIENTACION/QUIEN-ME-GUSTA/BANDERA-LESBIANA.png" class="bandera-lesbiana">
+				<img src="./images/ORIENTACION/QUIEN-ME-GUSTA/BANDERA-PANSEXUAL.png" class="bandera-pansexual">
 
+				<img src="./images/ORIENTACION/QUIEN-ME-GUSTA/ESTRELLAS-NEGRAS.png" class="estrellas-negras-1">
 
+				<div class="container-aviso lesbiana">
+					<div class="bolita"></div>
+
+					<img src="./images/ORIENTACION/QUIEN-ME-GUSTA/HOMOSEXUAL/LESBIANA.png" class="aviso-lesbiana">
+					<div class="texto-aviso texto-lesbiana hidden">
+						Son aquellas mujeres que sienten atracción emocional, afectiva y sexual hacia otras mujeres.
+					</div>
+				</div>
+				<div class="container-aviso gay">
+					<div class="bolita"></div>
+
+					<img src="./images/ORIENTACION/QUIEN-ME-GUSTA/HOMOSEXUAL/GAY.png" class="aviso-gay">
+					<div class="texto-aviso texto-gay hidden">
+						Son aquellos hombres que sienten atracción emocional, afectiva y sexual hacia otras hombres.
+					</div>
+				</div>
+				<div class="pareja-gay">
+					<img src="./images/ORIENTACION/QUIEN-ME-GUSTA/HOMOSEXUAL/HOMBRE-1.png" alt="" class="">
+					<img src="./images/ORIENTACION/QUIEN-ME-GUSTA/HETEROSEXUAL/CORAZON-LINEAS.png" alt="" class="">
+					<img src="./images/ORIENTACION/QUIEN-ME-GUSTA/HOMOSEXUAL/HOMBRE-2.png" alt="" class="">
+
+				</div>
+
+				<div class="container-aviso bisexual">
+					<div class="texto-aviso texto-bisexual ">
+						Son aquellos hombres que sienten atracción emocional, afectiva y sexual hacia otras hombres.
+					</div>
+					<img src="./images/ORIENTACION/QUIEN-ME-GUSTA/BISEXUAL/BISEXUAL.png" class="aviso-bisexual">
+					
+					<div class="bolita"></div>
+
+				</div>
+
+				<div class="pareja-bisexual">
+					<img src="./images/ORIENTACION/QUIEN-ME-GUSTA/BISEXUAL/PER-1.png" alt="" class="">
+					<img src="./images/ORIENTACION/QUIEN-ME-GUSTA/BISEXUAL/CORAZON-LINEA.png" alt="" class="corazon-linea">
+					<img src="./images/ORIENTACION/QUIEN-ME-GUSTA/BISEXUAL/PER-2.png" alt="" class="persona-bi-2">
+					<img src="./images/ORIENTACION/QUIEN-ME-GUSTA/BISEXUAL/PER-3.png" alt="" class="">
+				</div>
+				
 				
 			</div>
 
@@ -2875,6 +2985,10 @@
 		let textoHeterosexual = document.querySelector('.texto-heterosexual')
 		let avisoHomosexual = document.querySelector('.aviso-homosexual');
 		let textoHomosexual = document.querySelector('.texto-homosexual')
+		let avisoLesbiana = document.querySelector('.aviso-lesbiana');
+		let textoLesbiana = document.querySelector('.texto-lesbiana')
+		let avisoGay = document.querySelector('.aviso-gay')
+		let textoGay = document.querySelector('.texto-gay')
 
 
 		avisoFemenino.addEventListener(
@@ -3074,6 +3188,35 @@
 				textoHomosexual.classList.add('hidden');
 			}
 		)
+
+		avisoLesbiana.addEventListener(
+			'mouseenter', (e) => {
+				textoLesbiana.classList.remove('hidden');
+				textoLesbiana.classList.add('visto');
+			}
+		)
+
+		avisoLesbiana.addEventListener(
+			'mouseleave', (e) => {
+				textoLesbiana.classList.remove('visto');
+				textoLesbiana.classList.add('hidden');
+			}
+		)
+
+		avisoGay.addEventListener(
+			'mouseenter', (e) => {
+				textoGay.classList.remove('hidden');
+				textoGay.classList.add('visto');
+			}
+		)
+
+		avisoGay.addEventListener(
+			'mouseleave', (e) => {
+				textoGay.classList.remove('visto');
+				textoGay.classList.add('hidden');
+			}
+		)
+
 
 
 
