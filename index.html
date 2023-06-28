@@ -2369,7 +2369,11 @@
 		.trans-femenino {
 			position: absolute;
 			left: 53%;
-			top: 1020px;
+			top: 890px;
+		}
+
+		.texto-trans-femenino{
+			width: 700px;
 		}
 
 		.trans-masculino {
@@ -2517,6 +2521,14 @@
 			margin-left: 200px;
 		}
 
+		.pareja-pansexual{
+			position: absolute;
+			left: 15%;
+			top: 2500px;
+		}
+		.corazon-pansexual{
+			position: absolute;
+		}
 		
 
 	</style>
@@ -2708,8 +2720,7 @@
 					<img src="./images/GENERO/CUADROS/TRANSGENERO.png" alt="Aviso" class="aviso-transgenero">
 
 					<div class="texto-aviso texto-transgenero hidden">
-						Cuando la identidad o la expresión de género de una persona es diferente de aquella
-						típicamente se encuentran asociadas al sexo asignado al nacer.
+						Cuando la identidad o la expresión de género de una persona es diferente de aquella asociada típicamente al sexo asignado al nacer
 					</div>
 				</div>
 				<div class="container-planta-persona-persona-5 headline">
@@ -2776,6 +2787,8 @@
 				</div>
 
 				<div class="container-aviso trans-femenino">
+					<div class="texto-aviso texto-trans-femenino hidden">
+						También conocidas como mujeres trans. Es aquella persona que su sexo asignado al nacer fue masculino, pero se identifica con el género femenino.					</div>
 					<div class="bolita"></div>
 
 					<img src="./images/GENERO/CUADROS/TRANSFEMENINOI.png" class="aviso-trans-femenino">
@@ -2786,8 +2799,7 @@
 					<img src="./images/GENERO/CUADROS/TRANSMASCULINO.png" class="aviso-trans-masculino">
 					<div class="bolita"></div>
 					<div class="texto-aviso texto-trans-masculino hidden">
-						Aquella persona trans que construye su identidad transitando del masculino al femenino o del
-						femenino al masculino.
+						También conocidos como hombres. Es aquella persona que su sexo asignado al nacer fue femenino, pero se identifica con el género masculino.
 					</div>
 				</div>
 				<div class="container-expresion-genero">
@@ -2897,7 +2909,7 @@
 				</div>
 
 				<div class="container-aviso bisexual">
-					<div class="texto-aviso texto-bisexual ">
+					<div class="texto-aviso texto-bisexual hidden">
 						Son aquellas personas que sienten atracción emocional, afectiva y sexual tanto por hombres como por mujeres.
 					</div>
 					<img src="./images/ORIENTACION/QUIEN-ME-GUSTA/BISEXUAL/BISEXUAL.png" class="aviso-bisexual">
@@ -2912,7 +2924,13 @@
 					<img src="./images/ORIENTACION/QUIEN-ME-GUSTA/BISEXUAL/PER-2.png" alt="" class="persona-bi-2">
 					<img src="./images/ORIENTACION/QUIEN-ME-GUSTA/BISEXUAL/PER-3.png" alt="" class="">
 				</div>
-				
+				<div class="pareja-pansexual">
+					<img src="./images/ORIENTACION/QUIEN-ME-GUSTA/PANSEXUAL/PER-1.png" alt="" class="">
+					<img src="./images/ORIENTACION/QUIEN-ME-GUSTA/PANSEXUAL/PER-2.png" alt="" class="">
+					<img src="./images/ORIENTACION/QUIEN-ME-GUSTA/PANSEXUAL/CORAZON-LINEAS.png" alt="" class="corazon-pansexual">
+					<img src="./images/ORIENTACION/QUIEN-ME-GUSTA/PANSEXUAL/PER-3.png" alt="" class="">
+					<img src="./images/ORIENTACION/QUIEN-ME-GUSTA/PANSEXUAL/PER-4.png" alt="" class="">
+				</div>
 				
 			</div>
 
@@ -2983,6 +3001,7 @@
 		let avisoTransNoBinario = document.querySelector('.aviso-trans-nobinario');
 		let textoTransNoBinario = document.querySelector('.texto-trans-nobinario');
 		let avisoTransFemenino = document.querySelector('.aviso-trans-femenino');
+		let textoTransFemenino = document.querySelector('.texto-trans-femenino');
 		let avisoTransMasculino = document.querySelector('.aviso-trans-masculino');
 		let textoTransMasculino = document.querySelector('.texto-trans-masculino')
 		let avisoHeterosexual = document.querySelector('.aviso-heterosexual');
@@ -2993,7 +3012,10 @@
 		let textoLesbiana = document.querySelector('.texto-lesbiana')
 		let avisoGay = document.querySelector('.aviso-gay')
 		let textoGay = document.querySelector('.texto-gay')
-		
+		let avisoBisexual = document.querySelector('.aviso-bisexual');
+		let textoBisexual = document.querySelector('.texto-bisexual')
+
+
 
 		avisoFemenino.addEventListener(
 			'mouseenter', (e) => {
@@ -3138,15 +3160,15 @@
 
 		avisoTransFemenino.addEventListener(
 			'mouseenter', (e) => {
-				textoTransMasculino.classList.remove('hidden');
-				textoTransMasculino.classList.add('visto');
+				textoTransFemenino.classList.remove('hidden');
+				textoTransFemenino.classList.add('visto');
 			}
 		)
 
 		avisoTransFemenino.addEventListener(
 			'mouseleave', (e) => {
-				textoTransMasculino.classList.remove('visto');
-				textoTransMasculino.classList.add('hidden');
+				textoTransFemenino.classList.remove('visto');
+				textoTransFemenino.classList.add('hidden');
 			}
 		)
 
@@ -3218,6 +3240,20 @@
 			'mouseleave', (e) => {
 				textoGay.classList.remove('visto');
 				textoGay.classList.add('hidden');
+			}
+		)
+
+		avisoBisexual.addEventListener(
+			'mouseenter', (e) => {
+				textoBisexual.classList.remove('hidden');
+				textoBisexual.classList.add('visto');
+			}
+		)
+
+		avisoBisexual.addEventListener(
+			'mouseleave', (e) => {
+				textoBisexual.classList.remove('visto');
+				textoBisexual.classList.add('hidden');
 			}
 		)
 
