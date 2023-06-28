@@ -1464,7 +1464,7 @@
 			box-sizing: border-box;
 			width: 100%;
 
-			position: absolute;
+			/* position: absolute; */
 		}
 
 		.user {
@@ -1548,13 +1548,35 @@
 
 		/* estilos para FAQ */
 
+		.container-principal-comment {
+			display: flex;
+			justify-content: center;
+			width: 70%;
+			position: absolute;
+			margin: auto;
+			left: 0;
+			right: 0;
+			top: -5%;
+		}
+
+		.flor-izq{
+			margin-right: -20px;
+		}
+
+		.flor-der{
+			margin-left: -20px;
+		}
+
 		.principal-comment {
 			width: 100%;
-			height: 222px;
+			height: 470px;
 			position: relative;
-			border: 5px solid #036a93;
-			margin-bottom: 15px;
+			font-family: 'Poppins', sans-serif;
+			
+
 		}
+
+		
 
 		.slide-container {
 			width: 100%;
@@ -1572,18 +1594,29 @@
 			top: 0;
 			left: 0;
 			opacity: 0;
+			border-radius: 100px;
+			border: 10px solid #000;
+
+
+
 
 		}
 
 		.slide-title {
-			background-color: #036a93;
 			padding: 5px 10px;
-			color: #fff
+			color: #000;
+			justify-content: center;
+			align-items: center;
+			display: flex;
+			margin-top: 50px;
+			font-size: 25px;
+			font-family: 'Paytone One', sans-serif;
+
 		}
 
 		.slide-content {
 			font-size: 16px;
-			padding: 5px 10px;
+			padding: 5px 150px;
 			line-height: normal;
 			margin-top: 20px;
 		}
@@ -1594,7 +1627,7 @@
 
 		.slide-navigation {
 			position: absolute;
-			bottom: 10px;
+			bottom: 30px;
 			left: 50%;
 			transform: translateX(-50%);
 			display: flex;
@@ -1607,33 +1640,37 @@
 			width: 10px;
 			height: 10px;
 			border-radius: 50%;
-			background-color: #677784;
+			background-color: gray;
 
 			margin: 0 5px;
 			cursor: pointer;
 		}
 
 		.slide-navigation span.active {
-			background-color: #036a93;
+			background-color: #000;
 
 		}
 
 		.slide-future {
 			z-index: 2;
 			position: absolute;
-			bottom: 0;
 			display: flex;
 			width: 100%;
 			align-items: center;
-			justify-content: space-between;
+			justify-content: center;
 			padding: 0 5px;
 			font-size: 25px;
+			top: 40%;
+			gap: 80%;
 
 		}
 
 		.slide-future--next {
 			cursor: pointer;
-			color: #677784;
+			font-size: 50px;
+			color: #000;
+
+
 		}
 
 		.slide-future--next::selection {
@@ -1642,12 +1679,16 @@
 
 
 		.slide-future--next:hover {
-			color: #036a93;
+			color: #677784;
+
 		}
 
 		.slide-future--prev {
 			cursor: pointer;
-			color: #677784;
+			color: #000;
+
+			font-size: 50px;
+
 		}
 
 		.slide-future--prev::selection {
@@ -1655,7 +1696,8 @@
 		}
 
 		.slide-future--prev:hover {
-			color: #036a93;
+			color: #677784;
+
 		}
 
 		.comment-red {
@@ -1892,7 +1934,7 @@
 
 			-webkit-filter: drop-shadow(-2px -2px 5px rgba(0, 0, 0, 0.5));
 			filter: drop-shadow(-2px -2px 5px rgba(0, 0, 0, 0.5));
-		
+
 		}
 
 		.bandera-lgtb {
@@ -1935,7 +1977,7 @@
 
 		#pride-road {
 			min-height: 100vh;
-			position: absolute;
+			/* position: absolute; */
 		}
 
 		.container-title-road {
@@ -1953,6 +1995,39 @@
 			width: auto;
 			padding-bottom: 5px;
 			position: relative;
+		}
+
+		.container-title-final {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			padding: 25px;
+			position: absolute;
+			bottom: 7%;
+			width: 800px;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			font-family: 'Paytone One', sans-serif;
+			font-size: 2.5rem;
+			margin-block-end: 0px;
+			margin-block-start: 0px;
+		}
+
+		.subtitle-final {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			padding: 25px;
+			text-align: center;
+			position: absolute;
+			bottom: 2%;
+			width: 500px;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			font-family: 'Poppins', sans-serif;
+			font-size: 18px;
+			font-style: normal;
+			font-weight: normal;
 		}
 
 		.title-road:before {
@@ -1983,7 +2058,7 @@
 			font-size: 18px;
 			font-family: 'Poppins', sans-serif;
 			margin: 0 auto;
-			margin-top: 200px;
+			margin-top: 300px;
 			width: 600px;
 			text-align: center;
 			z-index: 99;
@@ -2035,6 +2110,17 @@
 			height: 3000px;
 		}
 
+		.container-road-5 {
+			position: relative;
+			width: 100vw;
+			height: 75vh;
+		}
+
+		.flecha-5 {
+			position: absolute;
+			bottom: 20%;
+			left: 50%;
+		}
 
 
 		.road-orientacion {
@@ -2050,6 +2136,22 @@
 			top: 150px;
 			width: 100vw;
 		}
+
+		.estrellas-negras-3 {
+			position: absolute;
+			bottom: 20%;
+			left: 20%;
+		}
+
+		.estrellas-negras-4 {
+			position: absolute;
+			bottom: 23%;
+			right: 20%;
+			transform: scaleX(-1);
+		}
+
+
+
 
 		.linea-sex {
 			/* position: absolute;
@@ -2704,7 +2806,7 @@
 			bottom: 2.5%;
 			left: 10%;
 			-webkit-filter: drop-shadow(-2px -2px 5px rgba(0, 0, 0, 0.5));
-    filter: drop-shadow(-2px -2px 5px rgba(0, 0, 0, 0.5));
+			filter: drop-shadow(-2px -2px 5px rgba(0, 0, 0, 0.5));
 		}
 
 		.corazones-diversidad {
@@ -2726,14 +2828,14 @@
 
 		.pareja-sexual {
 			position: absolute;
-			top: 5%;
+			top: 4.5%;
 			left: 15%;
 		}
 
 		.relacion-sexual {
 			position: absolute;
 			left: 20%;
-			top: 7%;
+			top: 6.5%;
 			z-index: -1;
 
 		}
@@ -2742,126 +2844,149 @@
 			margin-left: 200px;
 		}
 
-		.sexual{
+		.sexual {
 			position: absolute;
 			top: 5%;
 			width: 380px;
 			left: 35%;
 		}
 
-		.texto-sexual{
+		.texto-sexual {
 			width: 400px;
 		}
 
-		.espectro-asexual{
+		.espectro-asexual {
 			position: absolute;
 			top: 19%;
 			left: 15%;
 		}
 
-		.asexual{
+		.asexual {
 			position: absolute;
 			top: 25%;
 			left: 30%;
 			width: 350px;
 		}
 
-		.texto-asexual{
+		.texto-asexual {
 			width: 550px;
 		}
 
-		.pareja-asexual{
+		.pareja-asexual {
 			position: absolute;
 			top: 20%;
 			left: 50%;
 		}
 
-		.relacion-asexual--1{
+		.relacion-asexual--1 {
 			margin-bottom: 50px;
 			margin-left: 50px;
 		}
 
-		.relacion-asexual--2{
+		.relacion-asexual--2 {
 			margin-bottom: 50px;
 			margin-left: -20px;
 			z-index: -1;
 		}
 
-		.persona-asexual--2{
+		.persona-asexual--2 {
 			margin-top: 50px;
 			margin-left: 100px;
 		}
 
-		.bandera-asexual{
+		.bandera-asexual {
 			position: absolute;
 			left: 60%;
 			top: 12.5%;
 		}
 
-		.lgtb{
+		.lgtb {
 			position: absolute;
 			right: 5%;
 			top: 15%;
 			-webkit-filter: drop-shadow(-2px -2px 5px rgba(0, 0, 0, 0.5));
 			filter: drop-shadow(-2px -2px 5px rgba(0, 0, 0, 0.5));
-		
+
 		}
 
 
-		.bandera-demisexualarr{
+		.bandera-demisexualarr {
 			position: absolute;
 			left: 13%;
 			top: 35%;
 		}
 
-		.arromantico{
+		.arromantico {
 			position: absolute;
 			top: 40%;
 			left: 60%;
 		}
-		.texto-arromantico{
+
+		.texto-arromantico {
 			width: 470px;
 		}
 
-		.pareja-arromantica{
+		.pareja-arromantica {
 			position: absolute;
 			top: 38%;
 			left: 44%;
 		}
-		.relacion-arromantica{
+
+		.relacion-arromantica {
 			margin-left: -20px;
 		}
 
-		.estrellas-asex{
+		.estrellas-asex {
 			top: 32%;
 			position: absolute;
 			left: 10%;
 		}
 
-		.demisexual{
+		.demisexual {
 			position: absolute;
 			top: 43%;
 			left: 15%;
 			width: 350px;
 		}
 
-		.texto-demisexual{
+		.texto-demisexual {
 			width: 400px;
 		}
 
-		.pareja-demisexual{
+		.pareja-demisexual {
 			position: absolute;
 			top: 52%;
 			left: 15%;
 		}
 
-		.relacion-demisexual{
+		.relacion-demisexual {
 			margin-bottom: 40px;
 		}
-		.per2-demisexual{
+
+		.per2-demisexual {
 			margin-left: 30px;
 		}
 
+		.grisexual {
+			position: absolute;
+			top: 55%;
+			left: 45%;
+			width: 300px;
+		}
+
+		.texto-grisexual {
+			width: 400px;
+		}
+
+		.pareja-grisexual {
+			position: absolute;
+			top: 58%;
+			left: 62%;
+		}
+
+		.persona-grisexual-2 {
+			margin-left: 40px;
+		}
 	</style>
 	<header id="w-header">
 		<div class="container__menu">
@@ -3221,7 +3346,8 @@
 
 				</div>
 
-				<img src="./images/ORIENTACION/QUIEN-ME-GUSTA/BANDERA-BISEXUAL-GAY.png" class="banderas bandera-bisexual-gay">
+				<img src="./images/ORIENTACION/QUIEN-ME-GUSTA/BANDERA-BISEXUAL-GAY.png"
+					class="banderas bandera-bisexual-gay">
 				<img src="./images/ORIENTACION/QUIEN-ME-GUSTA/BANDERA-LESBIANA.png" class="banderas bandera-lesbiana">
 
 				<img src="./images/ORIENTACION/QUIEN-ME-GUSTA/ESTRELLAS-NEGRAS.png" class="estrellas-negras-1">
@@ -3311,70 +3437,261 @@
 				</div>
 				<div class="container-aviso sexual">
 					<div class="texto-aviso texto-sexual hidden">
-						Sienten atracción sexual <br>y afectiva 
+						Sienten atracción sexual <br>y afectiva
 					</div>
 					<div class="bolita"></div>
 					<img src="./images/ORIENTACION/COMO-ME-RELACIONO/SEXUAL/SEXUAL.png" class="aviso-sexual">
 				</div>
 				<div class="container-aviso espectro-asexual">
-					
+
 					<div class="bolita"></div>
-					<img src="./images/ORIENTACION/COMO-ME-RELACIONO/ASEXUAL/ESPECTRO-ASEXUAL.png" class="aviso-espectro-asexual">
+					<img src="./images/ORIENTACION/COMO-ME-RELACIONO/ASEXUAL/ESPECTRO-ASEXUAL.png"
+						class="aviso-espectro-asexual">
 				</div>
 
 				<div class="container-aviso asexual">
 					<img src="./images/ORIENTACION/COMO-ME-RELACIONO/ASEXUAL/ASEXUAL.png" class="aviso-asexual">
 					<div class="bolita"></div>
 					<div class="texto-aviso texto-asexual hidden">
-						Son aquellas personas que no experimentan atracción sexual por otras personas, pero sí (o no) pueden sentir atracción emocional y afectiva.
+						Son aquellas personas que no experimentan atracción sexual por otras personas, pero sí (o no)
+						pueden sentir atracción emocional y afectiva.
 					</div>
 				</div>
 				<img src="./images/ORIENTACION/COMO-ME-RELACIONO/BANDERA-ASEXUAL.png" class="bandera-asexual banderas">
 				<img src="./images/ORIENTACION/COMO-ME-RELACIONO/LGTB.png" class="lgtb">
 				<div class="pareja-asexual">
-					<img src="./images/ORIENTACION/COMO-ME-RELACIONO/ASEXUAL/PER-1.png" alt="" class="persona-asexual--1">
-					<img src="./images/ORIENTACION/COMO-ME-RELACIONO/ASEXUAL/RELACION-PER-1.png" alt="" class="relacion-asexual--1">
-					<img src="./images/ORIENTACION/COMO-ME-RELACIONO/ASEXUAL/PER-2.png" alt="" class="persona-asexual--2">
-					<img src="./images/ORIENTACION/COMO-ME-RELACIONO/ASEXUAL/RELACION-PER-2.png" alt="" class="relacion-asexual--2">
+					<img src="./images/ORIENTACION/COMO-ME-RELACIONO/ASEXUAL/PER-1.png" alt=""
+						class="persona-asexual--1">
+					<img src="./images/ORIENTACION/COMO-ME-RELACIONO/ASEXUAL/RELACION-PER-1.png" alt=""
+						class="relacion-asexual--1">
+					<img src="./images/ORIENTACION/COMO-ME-RELACIONO/ASEXUAL/PER-2.png" alt=""
+						class="persona-asexual--2">
+					<img src="./images/ORIENTACION/COMO-ME-RELACIONO/ASEXUAL/RELACION-PER-2.png" alt=""
+						class="relacion-asexual--2">
 				</div>
 
-				<img src="./images/ORIENTACION/COMO-ME-RELACIONO/BANDERA-DEMISEXUAL-ARROMANTICO.png" class="banderas bandera-demisexualarr">
+				<img src="./images/ORIENTACION/COMO-ME-RELACIONO/BANDERA-DEMISEXUAL-ARROMANTICO.png"
+					class="banderas bandera-demisexualarr">
 				<div class="container-aviso arromantico">
 					<div class="bolita"></div>
-					<img src="./images/ORIENTACION/COMO-ME-RELACIONO/ARROMANTICO/ARROMANTICA.png" class="aviso-arromantico">
+					<img src="./images/ORIENTACION/COMO-ME-RELACIONO/ARROMANTICO/ARROMANTICA.png"
+						class="aviso-arromantico">
 					<div class="texto-aviso texto-arromantico hidden ">
-						Son aquellas personas que no experimentan atracción romántica por otras personas, pero sí pueden sentir atracción sexual.
+						Son aquellas personas que no experimentan atracción romántica por otras personas, pero sí pueden
+						sentir atracción sexual.
 					</div>
 				</div>
 
 				<div class="pareja-arromantica">
-					<img src="./images/ORIENTACION/COMO-ME-RELACIONO/ARROMANTICO/PER.png" alt="" >
-					<img src="./images/ORIENTACION/COMO-ME-RELACIONO/ARROMANTICO/RELACION.png" alt="" class="relacion-arromantica" >
+					<img src="./images/ORIENTACION/COMO-ME-RELACIONO/ARROMANTICO/PER.png" alt="">
+					<img src="./images/ORIENTACION/COMO-ME-RELACIONO/ARROMANTICO/RELACION.png" alt=""
+						class="relacion-arromantica">
+
+
+				</div>
+				<img src="./images/ORIENTACION/COMO-ME-RELACIONO/ESTRELLAS.png" class="estrellas-asex">
+				<div class="container-aviso demisexual">
+					<div class="texto-aviso texto-demisexual  hidden">
+						Son aquellas personas que no experimentan atracción romántica por otras personas, pero sí pueden
+						sentir atracción sexual.
+					</div>
+					<div class="bolita"></div>
+					<img src="./images/ORIENTACION/COMO-ME-RELACIONO/DEMISEXUAL/DEMISEXUAL.png"
+						class="aviso-demisexual">
+				</div>
+				<div class="pareja-demisexual">
+					<img src="./images/ORIENTACION/COMO-ME-RELACIONO/demISEXUAL/PER-1.png" class="">
+					<img src="./images/ORIENTACION/COMO-ME-RELACIONO/demISEXUAL/RELACION.png"
+						class="relacion-demisexual">
+					<img src="./images/ORIENTACION/COMO-ME-RELACIONO/demISEXUAL/PER-2.png" class="per2-demisexual">
+
+				</div>
+				<div class="container-aviso grisexual">
+					<div class="texto-aviso texto-grisexual hidden ">
+						Son aquellas personas que experimentan atracción sexual por otras personas no de manera
+						frecuente o habitual, es decir, de manera diferente a las demás.
+					</div>
+					<img src="./images/ORIENTACION/COMO-ME-RELACIONO/GRISEXUALIDAD/GRISEXUALIDAD.png"
+						class="aviso-grisexual">
+					<div class="bolita"></div>
+				</div>
+				<div class="pareja-grisexual">
+					<img src="./images/ORIENTACION/COMO-ME-RELACIONO/GRISEXUALIDAD/PER-1.png">
+					<img src="./images/ORIENTACION/COMO-ME-RELACIONO/GRISEXUALIDAD/RELACION.png">
+					<img src="./images/ORIENTACION/COMO-ME-RELACIONO/GRISEXUALIDAD/PER-2.png"
+						class="persona-grisexual-2">
+
+				</div>
+				<img src="./images/flecha.png" class="flecha-5">
+				<img src="./images/ORIENTACION/QUIEN-ME-GUSTA/ESTRELLAS-NEGRAS.png" class="estrellas-negras-3">
+				<img src="./images/ORIENTACION/QUIEN-ME-GUSTA/ESTRELLAS-NEGRAS.png" class="estrellas-negras-4">
+				<div>
+					<h3 class="container-title-final"> ¿TIENES MÁS DUDAS DE LA SEXUALIDAD? </h3>
+					<h5 class="subtitle-final">
+						Carlos Tacuri, psicólogo especialista en diversidades, resuelve algunas dudas sobre la población
+						LGTBIQ+.
+					</h5>
+				</div>
+			</div>
+			<div class="container-road-5">
 
 				
-				</div>
-				<img src="./images/ORIENTACION/COMO-ME-RELACIONO/ESTRELLAS.png" class="estrellas-asex"> 
-			<div class="container-aviso demisexual">
-				<div class="texto-aviso texto-demisexual  hidden">
-					Son aquellas personas que no experimentan atracción romántica por otras personas, pero sí pueden sentir atracción sexual.
-				</div>
-					<div class="bolita"></div>
-					<img src="./images/ORIENTACION/COMO-ME-RELACIONO/DEMISEXUAL/DEMISEXUAL.png" class="aviso-demisexual">
-					
-				</div>
-			<div class="pareja-demisexual">
-				<img src="./images/ORIENTACION/COMO-ME-RELACIONO/demISEXUAL/PER-1.png" class="">
-				<img src="./images/ORIENTACION/COMO-ME-RELACIONO/demISEXUAL/RELACION.png" class="relacion-demisexual">
-				<img src="./images/ORIENTACION/COMO-ME-RELACIONO/demISEXUAL/PER-2.png" class="per2-demisexual">
+				<div class="container-principal-comment">
+					<img src="images/dudas/FLORES-IZQUIERDA.png" class="flor-izq">
 
+					<div class="principal-comment">
+						<div class="slide-future">
+							<span class="slide-future--prev" onclick="prevSlide()"> &#60;</span>
+							<span class="slide-future--next" onclick="nextSlide()"> &#62;</span>
+						</div>
+						<div class="slide-container">
+							<div class="slide">
+								<div class="slide-title">¿Qué es la sexualidad? </div>
+								<div class="slide-content"> La sexualidad es una parte inherente a la vida de toda persona.
+									Inicia desde la concepción y termina en nuestros últimos segundos. Esta posee dos
+									componentes: biológico (sexo) y social (identidad de género y orientación sexual). A la
+									vez, tiene determinadas funciones, como la reproducción (desde el punto de vista
+									biológico y social), los vínculos afectivos (comunican lo que sentimos) y el placer.
+								</div>
+							</div>
+							<div class="slide">
+								<div class="slide-title">¿Cada persona construye o descubre su sexualidad?</div>
+								<div class="slide-content">La sexualidad es parte de nuestra personalidad, la cual tiene un
+									componente biológico hereditario y otro de socialización, es decir, el espacio social en
+									el que con el tiempo se va adquiriendo conocimientos y experiencias. Por ello, no
+									solamente se descubre o solamente se construye, sino que es una mezcla de ambas cosas.
+								</div>
+							</div>
+							<div class="slide">
+								<div class="slide-title">¿Todas las personas LGTBIQ+ expresan su diversidad con su
+									apariencia?</div>
+								<div class="slide-content"> Definitivamente, no, porque no existe una forma o una expresión
+									de una persona LGTB. Si se le dice a alguien: “Dibuje a una persona LGTB”, no podrá
+									hacerlo. Cualquier persona, sin importar cómo sea vea, puede ser de la comunidad LGTB.
+								</div>
+							</div>
+							<div class="slide">
+								<div class="slide-title">¿Cuál es la diferencia entre una persona bisexual y pansexual?
+								</div>
+								<div class="slide-content"> Desde el punto de vista académico, existe un debate que plantea
+									que son lo mismo; sin embargo, de manera general, podemos decir que una persona
+									bisexual, por su definición, puede entenderse como una persona que siente atracción por
+									ambos sexos o ambos géneros —entendiéndolo desde el binarismo (hombre y mujer)—. En
+									cambio, la pansexualidad no distingue diferencias ni por género ni por sexo, simplemente
+									es la atracción de personas.</div>
+							</div>
+							<div class="slide">
+								<div class="slide-title">¿Qué orientación sexual tengo si me gustan las personas no
+									binarias?</div>
+								<div class="slide-content"> Se podría decir que eres una persona pansexual, porque no
+									distingues o no estás enfocada en el género de la persona, ya que quien te gusta es
+									alguien de género no binario. Pero también puede ser que seas una persona que se
+									identifica con cualquier orientación sexual, con la que mejor te sientas o te
+									represente. No obstante, si tienes alguna duda y si quieres recibir algún comentario
+									externo, puedes revisar lo que significa ser pansexual.</div>
+							</div>
+							<div class="slide">
+								<div class="slide-title">No encuentro a nadie sexualmente atractivo. ¿Eso significa que soy
+									asexual?</div>
+								<div class="slide-content"> Existe una posibilidad de que sí; sin embargo, tendríamos que
+									explorar qué edad tienes, cuánta experiencia tienes, si sientes fantasías y qué
+									entiendes por atracción sexual. Hay que tener en cuenta que la sexualidad y la atracción
+									no solamente se dan a través de un vínculo físico directo (besos, relaciones sexuales,
+									etc.), puede ser también a nivel de fantasías que uno llega a experimentar. Entonces, se
+									habría que evaluar si no sientes atracción, o puede ser que todavía estés comenzando a
+									explorar tu sexualidad debido a tu edad, o que estés pasando por un proceso físico. Por
+									ejemplo, un desequilibrio, un desbalance hormonal o una depresión, que puede hacer que
+									en este momento de tu vida no experimentes atracción sexual.</div>
+							</div>
+							<div class="slide">
+								<div class="slide-title">¿Cómo sé que no es falta de deseo, sino que soy asexual?</div>
+								<div class="slide-content"> Existe el deseo sexual hipoactivo, que es una disfunción sexual,
+									y está la asexualidad. La diferencia es que una persona con deseo sexual hipoactivo
+									siente malestar por no tener deseo sexual, es decir, quiere tener relaciones sexuales,
+									pero no puede y se frustra. En cambio, una persona asexual se siente tranquila, no tiene
+									interés, no le preocupa tener deseo sexual. Por ello, hay que diferenciar cuál se tiene.
+								</div>
+							</div>
+							<div class="slide">
+								<div class="slide-title">¿Cómo saber que soy alguien demisexual?</div>
+								<div class="slide-content"> Hay personas que no se pueden relacionar de forma sexual con
+									otras, pero no es porque no lo quieran, sino porque pueden tener inseguridades con su
+									cuerpo o confianza hacia uno mismo. Justamente, partiendo de hacer un análisis, hay que
+									ver cuál es la motivación de ese actuar. Si no tienes ningún problema con relacionarte,
+									no habría inconvenientes y encajas dentro de lo que podemos considerar una
+									demisexualidad. Sin embargo, si te gustaría, lo has intentado y te da miedo o tienes
+									prejuicios, por ejemplo, de tener sexo con alguien sin sentir afecto o un vínculo con
+									esa persona —porque te han enseñado que así no debería ser—, entonces, ya son los
+									prejuicios, no es que no se quiera.</div>
+							</div>
+							<div class="slide">
+								<div class="slide-title">¿Tengo que tener alguna relación o contacto <br>sexual con los dos
+									géneros para considerarme bisexual?
+								</div>
+								<div class="slide-content">No, incluso la persona puede nunca tener sexo o contacto físico
+									con alguien y saber claramente cuál es su orientación sexual. Hay que recordar que esta
+									tiene que ver con un tema de placer, deseo y de vínculo afectivo, ya que, en realidad,
+									esto último es lo que tendrá mucho mayor peso al momento de definir una orientación
+									sexual. Por ejemplo, uno puede enamorarse de una persona, la cual ni siquiera puede
+									saber de la existencia de la otra; o puedo excitarme, o disfrutar al ver una película o
+									foto de alguien. Entonces, se puede tener una vida sexual sin tener contacto con otras
+									personas y sentir mucho placer, disfrutarla y tener fantasías sin necesariamente tener
+									un contacto con otros.
+								</div>
+							</div>
+							<div class="slide">
+								<div class="slide-title">¿En todas las relaciones hay alguien con rol femenino y otro masculino?
+
+								</div>
+								<div class="slide-content">Definitivamente, no. Esos son prejuicios desde la construcción binaria de la sexualidad, en la cual debe haber lo femenino y masculino. Inclusive, personas de la comunidad comienzan a seguir estos roles, pero es porque lo han aprendido y sienten que debería ser así.
+
+								</div>
+							</div>
+							<div class="slide">
+								<div class="slide-title">¿Qué debo hacer si estoy inseguro de mi sexualidad?
+
+								</div>
+								<div class="slide-content">Se recomienda buscar ayuda en algún espacio que te pueda orientar. Eso va a asistir a la persona para que pueda sentirse mejor y resuelva sus dudas. Aunque, la verdad, no es que las tengan, sino que no quieren aceptar las respuestas.
+
+								</div>
+							</div>
+							
+
+
+						</div>
+
+						<div class="slide-navigation">
+
+						</div>
+					</div>
+					<img src="images/dudas/FLORES-DERECHA.png" class="flor-der">
+
+				</div>
 			</div>
-			
-			
-			
-			</div>
+
 		</section>
-	</div>
 
+	</div>
+	<footer style="background-color: #000;">
+		<div class="w-1000">
+
+			<span><strong>Texto:</strong> Lucía Solís</span>
+			<span><strong>Infografías:</strong> Jazmín Ceras
+			</span>
+			<span><strong>Desarrollo web:</strong> José Luis Huacles Unocc</span>
+			<span><strong>Diseño web:</strong> Jazmín Ceras</span>
+			
+			<span><strong>Edición y coordinación general:</strong> Gloria Purizaca</span>
+
+			<br>
+
+			<span>Si deseas contactarte con la unidad puedes escribirnos a:</span>
+			<span><strong>lrdata@glr.pe</strong></span>
+			<br>
+			<span>© Grupo La República </span>
+			<span>Todos los derechos reservados.</span>
+		</div>
+	</footer>
 
 	<script>
 
@@ -3480,7 +3797,8 @@
 		let textoArromantico = document.querySelector('.texto-arromantico')
 		let avisoDemisexual = document.querySelector('.aviso-demisexual')
 		let textoDemisexual = document.querySelector('.texto-demisexual')
-
+		let avisoGrisexual = document.querySelector('.aviso-grisexual');
+		let textoGrisexual = document.querySelector('.texto-grisexual');
 
 
 		avisoFemenino.addEventListener(
@@ -3790,8 +4108,20 @@
 				textoDemisexual.classList.add('hidden');
 			}
 		)
+		avisoGrisexual.addEventListener(
+			'mouseenter', (e) => {
+				textoGrisexual.classList.remove('hidden');
+				textoGrisexual.classList.add('visto');
+			}
+		)
 
-		
+		avisoGrisexual.addEventListener(
+			'mouseleave', (e) => {
+				textoGrisexual.classList.remove('visto');
+				textoGrisexual.classList.add('hidden');
+			}
+		)
+
 
 
 
@@ -3938,6 +4268,59 @@
 				});
 			});
 	</script>
+
+	<script>
+		const slides = document.querySelectorAll('.slide');
+		const slideNavigation = document.querySelector('.slide-navigation');
+		let currentSlide = 0;
+
+		// Aquí estamos creando los circulos por cada comentario
+		slides.forEach((_, index) => {
+			const span = document.createElement('span');
+			span.addEventListener('click', () => changeSlide(index));
+			slideNavigation.appendChild(span);
+		});
+
+
+		// Mostrar la diapositiva inicial
+		slides[currentSlide].classList.add('active');
+		slideNavigation.children[currentSlide].classList.add('active');
+
+
+		function changeSlide(index) {
+			if (index === currentSlide) return;
+
+			slides[currentSlide].classList.remove('active');
+			slides[index].classList.add('active');
+
+			slideNavigation.children[currentSlide].classList.remove('active');
+			slideNavigation.children[index].classList.add('active');
+
+			currentSlide = index;
+		}
+
+		// Función para avanzar a la siguiente diapositiva
+		function nextSlide() {
+			let nextSlideIndex = currentSlide + 1;
+			if (nextSlideIndex >= slides.length) {
+				nextSlideIndex = 0;
+			}
+			changeSlide(nextSlideIndex);
+		}
+
+		function prevSlide() {
+			let nextSlideIndex = currentSlide - 1;
+			if (nextSlideIndex == -1) {
+				nextSlideIndex = slides.length - 1;
+			}
+			changeSlide(nextSlideIndex);
+		}
+
+		// Cambiar de diapositiva automáticamente cada 3 segundos
+		setInterval(nextSlide, 11000);
+
+	</script>
+
 </body>
 
 </html>
