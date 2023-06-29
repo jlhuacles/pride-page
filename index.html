@@ -235,8 +235,12 @@
 			font-family: 'Paytone One', sans-serif;
 			max-width: 750px;
 			font-weight: 700;
-			margin: 50px auto;
-			z-index: 999;
+			margin: 0 auto;
+			z-index: 500;
+			position: absolute;
+			left: 0;
+			right: 0;
+			top: 25%;
 		}
 
 		h1 span {
@@ -1713,15 +1717,22 @@
 
 		#section-principal {
 
-			margin-top: 125px;
 			max-height: 100vh;
+			width: 100%;
+			height: 100vh;
+			position: relative;
 
 		}
 
 		.title-image {
-			margin: 0 auto;
+			position: absolute;
+			margin: 0;
 			text-align: center;
-			display: block;
+			top: 15%;
+			left: 0;
+			right: 0;
+			margin: 0 auto;
+			width: 12%;
 			-webkit-filter: drop-shadow(-2px -2px 5px rgba(0, 0, 0, 0.5));
 			filter: drop-shadow(-2px -2px 5px rgba(0, 0, 0, 0.5));
 		}
@@ -1729,15 +1740,16 @@
 		.star {
 			position: absolute;
 			z-index: -5;
+			width: 1.3%;
 		}
 
 		.star-1 {
-			top: 130px;
+			top: 15%;
 			left: 5%;
 		}
 
 		.star-2 {
-			top: 150px;
+			top: 15%;
 			left: 20%;
 		}
 
@@ -1757,8 +1769,9 @@
 		}
 
 		.interrogacion {
-			top: 225px;
+			top: 20%;
 			left: 20%;
+			width: 5%;
 			position: absolute;
 			z-index: -1;
 			-webkit-filter: drop-shadow(-2px -2px 5px rgba(0, 0, 0, 0.5));
@@ -1776,8 +1789,9 @@
 		}
 
 		.pride {
-			top: 240px;
+			top: 25%;
 			right: 20%;
+			width: 10%;
 			position: absolute;
 			z-index: -1;
 			-webkit-filter: drop-shadow(-2px -2px 5px rgba(0, 0, 0, 0.5));
@@ -1813,7 +1827,7 @@
 
 
 		svg {
-			font-size: calc(0.9em + 0.2vw);
+			font-size: calc(0.7em + 0.3vw);
 			font-weight: bold;
 			width: 650px;
 			height: 70px;
@@ -1825,35 +1839,61 @@
 		.svgStroke {
 			fill: white;
 			stroke: black;
-			stroke-width: 25px;
+			stroke-width: 1.5vw;
 			stroke-linejoin: round;
 		}
-
+		.titulo-especial{
+			position: absolute;
+			top: 25%;
+			width: 40%;
+			left: 0;
+			right: 0;
+			margin: 0 auto;
+		}
 		.subtitle {
 			font-size: 20px;
 			font-family: 'Poppins', sans-serif;
-			margin: 0 auto;
-			margin-top: 100px;
+			margin: 0;
+			position: absolute;
+			left:0;
+			right: 0;
+			top: 60%;
 			text-align: center;
 			z-index: 10;
 		}
 
 		.arrow {
+			position: absolute;
+			left:0;
+			right: 0;
+			top: 80%;
 			margin: 0 auto;
-			margin-top: 125px;
 			text-align: center;
-			display: block;
 			animation-name: respirando;
 			animation-duration: 2s;
 			animation-iteration-count: infinite;
+			width: 2.5%;
 
+		}
+
+		.arrow2{
+			position: absolute;
+			left:0;
+			right: 0;
+			top: 1.5%;
+			margin: 0 auto;
+			text-align: center;
+			animation-name: respirando;
+			animation-duration: 2s;
+			animation-iteration-count: infinite;
+			width: 2.5%;
 		}
 
 		.nube {
 			position: absolute;
 			-webkit-filter: drop-shadow(-1px -1px 10px rgba(0, 0, 0, 0.2));
 			filter: drop-shadow(-1px -1px 10px rgba(0, 0, 0, 0.2));
-
+			width: 37%;
 		}
 
 		.nube-1 {
@@ -1931,42 +1971,36 @@
 		.banderas {
 			z-index: 3;
 			position: absolute;
-
+			width: 5%;
 			-webkit-filter: drop-shadow(-2px -2px 5px rgba(0, 0, 0, 0.5));
 			filter: drop-shadow(-2px -2px 5px rgba(0, 0, 0, 0.5));
 
 		}
 
 		.bandera-lgtb {
-			top: 65.5%;
+			top: 70.5%;
 			left: 27.5%;
 			z-index: 2;
 			transform: rotate(-10deg);
 		}
 
 		.bandera-trans {
-			top: 68%;
+			top: 70.5%;
 			left: 12.5%;
-			width: 125px;
-			height: 122px;
 		}
 
 		.bandera-bisexual {
-			top: 65.5%;
+			top: 69.5%;
 			right: 25%;
-			width: 125px;
-			height: 122px;
 			transform: rotate(5deg) scaleX(-1);
 			z-index: 2;
 		}
 
 		.bandera-lesbian {
-			top: 62%;
+			top: 65%;
 			right: 12.5%;
 			transform: rotate(1deg) scaleX(-1);
 			z-index: 4;
-			width: 125px;
-			height: 122px;
 		}
 
 		.bandera-pansexual {
@@ -1977,6 +2011,7 @@
 
 		#pride-road {
 			min-height: 100vh;
+			position: relative;
 			/* position: absolute; */
 		}
 
@@ -2045,10 +2080,10 @@
 
 			content: "";
 			position: absolute;
-			width: 50%;
+			width: 80%;
 			height: 1px;
 			bottom: 0;
-			left: 25%;
+			left: 10%;
 			border-bottom: 3px dashed #000;
 
 
@@ -2057,10 +2092,10 @@
 		.title-road:after {
 			content: "";
 			position: absolute;
-			width: 50%;
+			width: 80%;
 			height: 1px;
 			top: 0;
-			left: 25%;
+			left: 10%;
 			border-bottom: 3px dashed #000;
 
 		}
@@ -2069,8 +2104,8 @@
 			font-size: 18px;
 			font-family: 'Poppins', sans-serif;
 			margin: 0 auto;
-			margin-top: 300px;
-			width: 600px;
+			margin-top: 100px;
+			width: 30%;
 			text-align: center;
 			z-index: 99;
 		}
@@ -2080,7 +2115,7 @@
 			font-family: 'Poppins', sans-serif;
 			margin: 0 auto;
 			margin-top: 150px;
-			width: 600px;
+			width: 30%;
 			text-align: center;
 			z-index: 99;
 			font-style: italic;
@@ -3043,10 +3078,99 @@
 			color: blue;
 		}
 
-		
+		@media (max-width: 810px) {
+			
+			#section-principal{
+				height: 50vh;
+			}
+			.title-image{
+				top: 20%;
+				width: 20%;
+
+			}
+			.titulo-especial{
+				width: 85%;
+				top: 30%;
+			}
+
+			.pride{
+				width: 13%;
+				top: 20%;
+				right: 5%;
+			}
+
+			.svgStroke{
+				stroke-width: 2vw;
+				
+			}
+
+			.interrogacion{
+				top: 20%;
+				margin: 0;
+				left: 5%;
+				width: 5%;
+			}
+
+			
+			.star{
+				width: 2%;
+			}
+
+			.nube{
+				top: 80%;
+			}
+
+			.nube-1{
+				top: 72%;
+			}
+
+			.nube-4{
+				top:  72%;
+			}
+
+			.banderas{
+				width:10%;
+				top: 77%;
+			}
+	
+			.subtitle{
+				font-size: 12px;
+				top: 60%;
+				line-height: 1.2;
+			}
+
+			.arrow{
+				top: 82.5%;
+				width: 6%;
+			}
+
+			.resume{
+				width: 85%;
+				font-size: 12px;
+				line-height: 1.2;
+				margin-top: 50px;
+			}
+
+			.arrow2{
+				width: 6%;
+			}
+
+			.resume-son{
+				font-size: 12px;
+				line-height: 1.1;
+				width: 85%;
+				margin-top: 100px;
+			}
+
+			h2{
+				font-size: 1.25rem;
+			}
+		}
 
 
 
+
+	
 	</style>
 	<header id="w-header">
 		<div class="container__menu">
@@ -3090,7 +3214,7 @@
 			<!-- <div class="title-principal">
 				<h1>¿NO ENTIENDES A LA COMUNIDAD LGTB, PERO QUIERES HACERLO?</h1>
 			</div> -->
-			<h1 class="headline h1-principal">
+			<!-- <h1 class=" h1-principal">
 				<svg viewBox="10 0 450 70">
 					<text class="svgStroke" x="10" y="45">¿NO ENTIENDES A LA</text>
 					<text class="svgText" x="10" y="45">¿NO ENTIENDES A LA</text>
@@ -3103,7 +3227,7 @@
 					<text class="svgStroke" x="10" y="45">PERO QUIERES HACERLO?</text>
 					<text class="svgText" x="10" y="45">PERO QUIERES HACERLO?</text>
 				</svg>
-			</h1>
+			</h1> -->
 			<div class="subtitle headline">
 				Sigue el camino y descubre <br>
 				la sexualidad humana
@@ -3119,18 +3243,18 @@
 			<img class="banderas bandera-lgtb" src="./images/banderas/lgtb.png" alt="bandera LGTB">
 			<img class="banderas bandera-bisexual" src="./images/banderas/banderabisexual.png" alt="bandera bisexual">
 			<img class="banderas bandera-lesbian" src="./images/banderas/banderalesbian.png" alt="bandera lesbian">
-
+			<img class="titulo-especial" src="./images/titulo-especial.png">
 		</section>
 		<section id="pride-road">
 			<div class="resume headline">
 				65% de la población LGTBIQ+ siente que la sociedad peruana no es respetuosa
-				a la orientación sexual / identidad de género. <br> Esto sucede, en parte, por la falta
+				a la orientación sexual / identidad de género.  Esto sucede, en parte, por la falta
 				de conocimiento hacia estos conceptos. Por ello, te los presentamos de manera sencila.
 			</div>
 			<div class="resume-son headline">
 				Pase el cursor sobre la palabra para ver la definición
 			</div>
-			<img class="arrow" src="./images/flecha.png" alt="Hacia abajo">
+			<img class="arrow2" src="./images/flecha.png" alt="Hacia abajo">
 			<div class="container-title-road ">
 				<h2 class="title-road headline">DESCUBRIENDO LA SEXUALIDAD</h2>
 			</div>
