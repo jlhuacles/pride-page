@@ -2037,7 +2037,7 @@
 			position: absolute;
 			top: 0;
 			left: 56%;
-			width: 18%;
+			width: 15%;
 			font-family: 'Poppins', sans-serif;
 			font-size: 16px;
 
@@ -2271,6 +2271,7 @@
 			display: block;
 			z-index: 3;
 			width: 7%;
+			cursor: pointer;
 		}
 
 
@@ -3206,14 +3207,14 @@
 			}
 
 			.title-image {
-				top: 20%;
+				top: 30%;
 				width: 20%;
 
 			}
 
 			.titulo-especial {
 				width: 85%;
-				top: 28%;
+				top: 43%;
 			}
 
 			.pride {
@@ -3242,29 +3243,29 @@
 			.nube {}
 
 			.nube-1 {
-				top: 73%;
+				top: 97%;
 			}
 
 			.nube-2 {
-				top: 83%;
+				top: 104%;
 				left: 7.5%;
 			}
 
 			.nube-3 {
-				top: 82%;
+				top: 106%;
 				left: -12.5%;
 			}
 
 			.nube-4 {
-				top: 73%;
+				top: 97%;
 			}
 
 			.nube-5 {
-				top: 83%;
+				top: 104%;
 			}
 
 			.nube-6 {
-				top: 82.5%;
+				top: 106.5%;
 			}
 
 			.banderas {
@@ -3273,14 +3274,14 @@
 
 			.subtitle {
 				font-size: 12px;
-				top: 55%;
+				top: 74%;
 				line-height: 1.1;
 				width: 85%;
 
 			}
 
 			.arrow {
-				top: 100%;
+				top: 138%;
 				width: 6%;
 			}
 
@@ -3305,7 +3306,7 @@
 				font-size: 12px;
 				line-height: 1.1;
 				width: 85%;
-				margin-top: 100px;
+				margin-top: 70%;
 			}
 
 			h2 {
@@ -3837,6 +3838,10 @@
 				width: 60%;
 			}
 
+			.title-road{
+
+			}
+
 			.tres-estrellas {
 				top: 8%;
 				left: 80%;
@@ -3854,19 +3859,19 @@
 			}
 
 			.bandera-trans {
-				top: 79.5%;
+				top: 103%;
 			}
 
 			.bandera-lgtb {
-				top: 79.5%;
+				top: 101.5%;
 			}
 
 			.bandera-bisexual {
-				top: 79.5%;
+				top: 101.5%;
 			}
 
 			.bandera-lesbian {
-				top: 79.5%;
+				top: 103%;
 			}
 
 
@@ -4325,7 +4330,7 @@ right: 0;
 			<div class="subtitle ">
 				65% de la población LGTBIQ+ siente que la sociedad peruana no es respetuosa
 				a la orientación sexual / identidad de género. Esto sucede, en parte, por la falta
-				de conocimiento hacia estos conceptos. Por ello, te los presentamos de manera sencila. Una guía para descubrir la sexualidad humana.
+				de conocimiento hacia estos conceptos. Una guía para descubrir la sexualidad humana.
 			</div>
 			<img class="arrow" src="./images/flecha.png" alt="Hacia abajo">
 			<img class="nube nube-1 " src="./images/NUBES/nube1izquierda.png" alt="Una nube">
@@ -4353,7 +4358,7 @@ right: 0;
 			</div>
 			<div class="container-road">
 				<img src="./images/sexo.png" alt="Dice Sexo" class="image-sex">
-				<div class="texto-sexo">
+				<div class="texto-sexo hidden">
 					La suma de las características biológicas que definen a las personas como mujeres y hombres.
 					(Cromosomas, genitales, etc.)
 				</div>
@@ -5140,8 +5145,14 @@ right: 0;
 		let textoDemisexual = document.querySelector('.texto-demisexual')
 		let avisoGrisexual = document.querySelector('.aviso-grisexual');
 		let textoGrisexual = document.querySelector('.texto-grisexual');
+		let avisoSexo = document.querySelector('.image-sex');
+		let textoSexo = document.querySelector('.texto-sexo')
 
+		
 
+		
+		
+		
 		avisoFemenino.addEventListener(
 			'mouseenter', (e) => {
 				texto.classList.remove('hidden');
@@ -5460,6 +5471,20 @@ right: 0;
 			'mouseleave', (e) => {
 				textoGrisexual.classList.remove('visto');
 				textoGrisexual.classList.add('hidden');
+			}
+		)
+
+		avisoSexo.addEventListener(
+			'mouseenter', (e) => {
+				textoSexo.classList.remove('hidden');
+				textoSexo.classList.add('visto');
+			}
+		)
+
+		avisoSexo.addEventListener(
+			'mouseleave', (e) => {
+				textoSexo.classList.remove('visto');
+				textoSexo.classList.add('hidden');
 			}
 		)
 
