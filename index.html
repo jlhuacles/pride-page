@@ -2271,7 +2271,6 @@
 			display: block;
 			z-index: 3;
 			width: 7%;
-			cursor: pointer;
 		}
 
 
@@ -3168,16 +3167,15 @@
 		.link-final {
 			position: absolute;
 			margin: auto;
-			left: 0;
-			right: 0;
-			bottom: 10%;
+			left: 60.5%;
+			bottom: 30%;
 			cursor: pointer;
 			background: white;
 			color: black;
 			font-family: 'Poppins', sans-serif;
 			display: flex;
 			justify-content: center;
-			width: 300px;
+			width: 150px;
 			border: 2px solid black;
 			border-radius: 20px;
 			font-size: 20px;
@@ -3199,6 +3197,17 @@
 		.link-final a:hover {
 			color: blue;
 		}
+
+		.cisgenero-femenino img{
+			max-width: 180px;
+		}
+
+		.cisgenero-masculino img{
+			max-width: 180px;
+		}
+
+
+
 
 		@media (max-width: 720px) {
 
@@ -4269,6 +4278,8 @@ right: 0;
 			.link-final{
 				bottom: -5%;
 			}
+
+			
 		}
 	</style>
 	<header id="w-header">
@@ -4359,7 +4370,7 @@ right: 0;
 			</div>
 			<div class="container-road">
 				<img src="./images/sexo.png" alt="Dice Sexo" class="image-sex">
-				<div class="texto-sexo hidden">
+				<div class="texto-sexo ">
 					La suma de las características biológicas que definen a las personas como mujeres y hombres.
 					(Cromosomas, genitales, etc.)
 				</div>
@@ -4401,6 +4412,8 @@ right: 0;
 						Persona que posee características biológicas asociadas al cromosoma xy
 					</div>
 				</div>
+				<div class="link-final" ><a href="https://larepublica.pe/sociedad/2023/06/28/personas-intersexuales-una-identidad-en-busca-de-respeto-y-reconocimiento-hacia-sus-cuerpos-atmp-1640828">
+					Ver más</a></div>
 				<div  class="container-aviso intersex ">
 
 					<img src="./images/sex/intersex.png" class="aviso-intersex">
@@ -5012,8 +5025,7 @@ right: 0;
 					<img src="images/dudas/FLORES-DERECHA.png" class="flor-der">
 
 				</div>
-				<div class="link-final" ><a href="#ver-mas">
-						Ver más</a></div>
+				
 			</div>
 
 		</section>
@@ -5146,8 +5158,8 @@ right: 0;
 		let textoDemisexual = document.querySelector('.texto-demisexual')
 		let avisoGrisexual = document.querySelector('.aviso-grisexual');
 		let textoGrisexual = document.querySelector('.texto-grisexual');
-		let avisoSexo = document.querySelector('.image-sex');
-		let textoSexo = document.querySelector('.texto-sexo')
+		// let avisoSexo = document.querySelector('.image-sex');
+		// let textoSexo = document.querySelector('.texto-sexo')
 
 		
 
@@ -5475,19 +5487,19 @@ right: 0;
 			}
 		)
 
-		avisoSexo.addEventListener(
-			'mouseenter', (e) => {
-				textoSexo.classList.remove('hidden');
-				textoSexo.classList.add('visto');
-			}
-		)
+		// avisoSexo.addEventListener(
+		// 	'mouseenter', (e) => {
+		// 		textoSexo.classList.remove('hidden');
+		// 		textoSexo.classList.add('visto');
+		// 	}
+		// )
 
-		avisoSexo.addEventListener(
-			'mouseleave', (e) => {
-				textoSexo.classList.remove('visto');
-				textoSexo.classList.add('hidden');
-			}
-		)
+		// avisoSexo.addEventListener(
+		// 	'mouseleave', (e) => {
+		// 		textoSexo.classList.remove('visto');
+		// 		textoSexo.classList.add('hidden');
+		// 	}
+		// )
 
 
 
