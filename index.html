@@ -229,7 +229,7 @@
 		}
 
 		h1 {
-			font-size: 45px;
+			font-size: 70px;
 			line-height: 1;
 			text-align: center;
 			font-family: 'Paytone One', sans-serif;
@@ -240,7 +240,7 @@
 			position: absolute;
 			left: 0;
 			right: 0;
-			top: 25%;
+			top: 24%;
 		}
 
 		h1 span {
@@ -3103,7 +3103,21 @@
 		.relacion-arromantica {
 			margin-left: -20px;
 		}
+		.title-shadow{
+			/* text-shadow: 10px 0 #000, -10px 0 #000, 0 10px #000, 0 -10px #000,
+               5px 5px #000, -5px -5px #000, 5px -5px #000, -5px 5px #000; */
 
+			  text-shadow:  7px 7px 0px rgba(0, 0, 0, 1), 
+               7px -7px 0px rgba(0,0,0,1), 
+			   -7px 7px 0px rgba(0,0,0,1), 
+			   -7px -7px 0px rgba(0,0,0,1), 
+			   7px 0px 0px rgba(0,0,0,1), 
+			   0px 7px 0px rgba(0,0,0,1), 
+			   -7px 0px 0px rgba(0,0,0,1), 
+			   0px -7px 0px rgba(0,0,0,1)
+
+			
+		}
 		.estrellas-asex {
 			top: 32%;
 			position: absolute;
@@ -3557,7 +3571,23 @@
 				align-content: center;
 				align-items: center;
 			}
+			h1{
+				font-size: 45px;
+				top: 42%;
+			}
 
+			.title-shadow{
+				text-shadow:   5px 5px 0px rgba(0, 0, 0, 1), 
+               5px -5px 0px rgba(0,0,0,1), 
+			   -5px 5px 0px rgba(0,0,0,1), 
+			   -5px -5px 0px rgba(0,0,0,1), 
+			   5px 0px 0px rgba(0,0,0,1), 
+			   0px 5px 0px rgba(0,0,0,1), 
+			   -5px 0px 0px rgba(0,0,0,1), 
+			   0px -5px 0px rgba(0,0,0,1);
+
+
+			}
 			.container-planta-persona-persona-4 {
 				top: 20%;
 				left: 37%;
@@ -4156,7 +4186,7 @@ width: 31%;
 
 			.container-road-5 {
 				margin-top: 55%;
-				margin-bottom: 15%;
+				margin-bottom: 1%;
 			}
 
 			.subtitle-final {
@@ -4306,6 +4336,8 @@ right: 0;
 	<div id="container">
 
 		<section id="section-principal">
+
+			<h1 class="title-shadow"> ¿No entiendes a la comunidad LGTB, pero quieres hacerlo?</h1>
 			<img class="title-image" src="./images/loveislove.png" alt="Love is love">
 
 			<img class="star star-1" src="./images/estrella.png">
@@ -4355,7 +4387,6 @@ right: 0;
 			<img class="banderas bandera-lgtb" src="./images/banderas/lgtb.png" alt="bandera LGTB">
 			<img class="banderas bandera-bisexual" src="./images/banderas/banderabisexual.png" alt="bandera bisexual">
 			<img class="banderas bandera-lesbian" src="./images/banderas/banderalesbian.png" alt="bandera lesbian">
-			<img class="titulo-especial" src="./images/titulo-especial.png">
 		</section>
 		<section id="pride-road">
 			<!-- <div class="resume ">
